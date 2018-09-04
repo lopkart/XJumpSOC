@@ -16,6 +16,7 @@ TagManager:
   - LineCreatorArea
   - CheckPoint
   - LinedArea
+  - LevelMenuUI
   layers:
   - Default
   - TransparentFX

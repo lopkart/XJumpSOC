@@ -1,13 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class EndPointController : MonoBehaviour {
 
     /*
      * na zaciatku sa LevelMenu vypne a pri dotyku hraca s cielom
-     * sa zapne a pokracovanie je v scripte LevelMenuController
+     * sa zapne. Pokracovanie je v scripte LevelMenuController
      */
 
     public GameObject LevelMenuUI;

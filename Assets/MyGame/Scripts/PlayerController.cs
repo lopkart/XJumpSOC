@@ -20,8 +20,7 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Jumping - Ground Check Options")]
     public LayerMask whatIsGround;                      // nastavenie objektov ako vrstva Ground --> na tejto vrstve môže Hráč skákať len raz
-    public LayerMask whatIsNonGround;                   // nastavenie objektov ako vrstva NonGround --> na tejto vrstve nemôže Hráč skákať
-    public LayerMask whatIsJumpingWall;                 // nastavenie objektov ako vrstva JumpingWall --> na tejto vrstve môže Hráč skákať bokom
+    public LayerMask whatIsNonGround;                   // nastavenie objektov ako vrstva NonGround --> na tejto vrstve nemôže Hráč skákať               // nastavenie objektov ako vrstva JumpingWall --> na tejto vrstve môže Hráč skákať bokom
     public Transform groundCheck;                       // dieťa Hráča v hierarchii --> pre dotyk vrstvy Ground
     public float groundCheckRadius;                     // veľkosť dieťaťa            
     private bool isJumping;                             // bool na to či Hráč práve skáče alebo nie --> úprava na dvojitý skok
@@ -145,12 +144,12 @@ public class PlayerController : MonoBehaviour {
 
     bool TouchedLeft()
     {
-        return Physics2D.OverlapCircle(side[0].position, groundCheckRadius, whatIsJumpingWall);
+        return Physics2D.OverlapCircle(side[0].position, groundCheckRadius, whatIsGround);
     }
 
     bool TouchedRight()
     {
-        return Physics2D.OverlapCircle(side[1].position, groundCheckRadius, whatIsJumpingWall);
+        return Physics2D.OverlapCircle(side[1].position, groundCheckRadius, whatIsGround);
     }
 
 
