@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour {
     private Vector3 respawnPoint;
     private Vector3 startPoint;
 
-    public Rigidbody2D rb;
+    private Rigidbody2D rb;
     protected Collider2D coll;
 
 

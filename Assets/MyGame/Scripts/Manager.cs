@@ -7,10 +7,10 @@ public class Manager : MonoBehaviour {
     [Header("Change size of ChangingObjects in the script too!")]
     public GameObject[] ChangingObjects;
     public GameObject Player;
+    public float respawnPosition_Min;
+    public float respawnPosition_Max;
 
     private static int ChangingObjectsAmount = 39;  // <---
-    private float respawnPosition_Min = -14f;
-    private float respawnPosition_Max = 39f;
     private Vector2[] ChangingObjectsHelpP = new Vector2[ChangingObjectsAmount];
     private Quaternion[] ChangingObjectsHelpR = new Quaternion[ChangingObjectsAmount];
     private Rigidbody2D[] rb = new Rigidbody2D[ChangingObjectsAmount];
@@ -18,10 +18,9 @@ public class Manager : MonoBehaviour {
 
     void Start()
     {
-
         for (int i = 0; i < ChangingObjectsAmount; i++)
         {
-            rb[i] = ChangingObjects[i].GetComponent<Rigidbody2D>();
+            rb[i] = ChangingObjects[i].GetComponent<Rigidbody2D>() ?? ChangingObjects[i].AddComponent<Rigidbody2D>();
             ChangingObjectsHelpP[i] = ChangingObjects[i].transform.position;
             ChangingObjectsHelpR[i] = ChangingObjects[i].transform.rotation;
         }

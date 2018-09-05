@@ -4,23 +4,31 @@ using UnityEngine;
 
 public class MovingUpCubeController : MonoBehaviour {
 
+    /*
+     * na zaciatku sa LevelMenu vypne a pri dotyku hraca s cielom
+     * sa zapne. Pokracovanie je v scripte LevelMenuController
+     */
+
     public GameObject LevelMenuUI;
 
+    private float Multiplier = 0.1f;
+    private Rigidbody2D rb2D;
 
-    // Use this for initialization
-    void Start () {
-        //LevelMenuUI = GameObject.FindGameObjectWithTag("LevelMenuUI");
+
+    private void Start()
+    {
+        rb2D = GetComponent<Rigidbody2D>() ?? gameObject.AddComponent<Rigidbody2D>();
         LevelMenuUI.SetActive(false);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-    void OnTriggerEnter2D(Collider2D col)
+    private void Update()
     {
-        if(col.tag == "Player")
+        rb2D.velocity += Vector2.up * Multiplier * Time.deltaTime;
+    }
+
+    public void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.tag == "Player")
         {
             LevelMenuUI.SetActive(true);
         }
