@@ -10419,7 +10419,7 @@ Prefab:
     - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
         type: 2}
       propertyPath: endForGold
-      value: 5
+      value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
         type: 2}
@@ -10431,6 +10431,16 @@ Prefab:
       propertyPath: endForBronze
       value: 48
       objectReference: {fileID: 0}
+    - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
+        type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 910689882}
+    - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
+        type: 2}
+      propertyPath: playerRb
+      value: 
+      objectReference: {fileID: 910689885}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb18e3dbb4c13df47bbc69f74f2945bb, type: 2}
   m_IsPrefabParent: 0

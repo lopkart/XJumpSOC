@@ -12,6 +12,7 @@ public class LevelMenuController : MonoBehaviour {
 
     public Rigidbody2D playerRb;
     public Rigidbody2D MovingUpCubeRb;
+    public bool Resetted = false;
     Animator Anim;
     TimeController timeController;
     float tTimeHelp;
@@ -53,6 +54,7 @@ public class LevelMenuController : MonoBehaviour {
 
     public void ResetLevelBttn()
     {
+        Resetted = true;
         SceneManager.LoadScene(Application.loadedLevel);
     }
 }
