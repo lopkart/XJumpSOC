@@ -193,6 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRb: {fileID: 0}
   MovingUpCubeRb: {fileID: 0}
+  Resetted: 0
 --- !u!114 &114378113707379598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -862,7 +863,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1233100426483242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 990}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 224140844100284034}
