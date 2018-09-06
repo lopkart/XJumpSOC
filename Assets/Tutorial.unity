@@ -5189,6 +5189,11 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114230469443007736, guid: ff336fffb3aa7a54b9baba559b96af2d,
+        type: 2}
+      propertyPath: playerRb
+      value: 
+      objectReference: {fileID: 1846102165}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff336fffb3aa7a54b9baba559b96af2d, type: 2}
   m_IsPrefabParent: 0
@@ -5428,6 +5433,16 @@ Prefab:
       propertyPath: Player
       value: 
       objectReference: {fileID: 1897817649}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: respawnPosition_Min
+      value: -14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: respawnPosition_Max
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 551ba88fa8a27c04884ed0009882491f, type: 2}
   m_IsPrefabParent: 0
@@ -6856,6 +6871,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
   m_IsPrefabParent: 0
+--- !u!50 &1846102165 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50926148649000536, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+    type: 2}
+  m_PrefabInternal: {fileID: 1846102164}
 --- !u!1001 &1847264726
 Prefab:
   m_ObjectHideFlags: 0

@@ -809,6 +809,11 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114230469443007736, guid: ff336fffb3aa7a54b9baba559b96af2d,
+        type: 2}
+      propertyPath: playerRb
+      value: 
+      objectReference: {fileID: 1278764919}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff336fffb3aa7a54b9baba559b96af2d, type: 2}
   m_IsPrefabParent: 0
@@ -3055,6 +3060,16 @@ Prefab:
       propertyPath: ChangingObjects.Array.data[38]
       value: 
       objectReference: {fileID: 1273473278}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: respawnPosition_Max
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: respawnPosition_Min
+      value: -15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 551ba88fa8a27c04884ed0009882491f, type: 2}
   m_IsPrefabParent: 0
@@ -3156,6 +3171,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1278764916}
   m_Script: {fileID: 11500000, guid: d4b71462644f58848b2f82e31f9615e2, type: 3}
+--- !u!50 &1278764919 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 50926148649000536, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+    type: 2}
+  m_PrefabInternal: {fileID: 1278764916}
 --- !u!1 &1292214627 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1870128575896324, guid: b80e18918e176c645bc9ff94ee71ffd2,

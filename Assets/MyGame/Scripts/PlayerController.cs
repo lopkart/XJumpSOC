@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
     *          V A R I A B L E S           *
     ****************************************/
     [Header("MOVEMENT")]
-    public float moveSpeed = 2f;                        // rýchlosť pohybu
+    public float moveSpeed = 9f;                        // rýchlosť pohybu
 
     [Header("JUMPING")]
     [Range(5, 20)]
@@ -39,7 +39,8 @@ public class PlayerController : MonoBehaviour {
     private Vector3 respawnPoint;
     private Vector3 startPoint;
 
-    private Rigidbody2D rb;
+    [HideInInspector]
+    public Rigidbody2D rb;
     protected Collider2D coll;
 
 

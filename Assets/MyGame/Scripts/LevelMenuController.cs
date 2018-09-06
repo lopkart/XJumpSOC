@@ -5,27 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class LevelMenuController : MonoBehaviour {
 
-    /* ked sa zapne gameObject do ktoreho je tento script vlozeny spusti sa animacia ktora je dopredu vlozena
+    /* 
+     * ked sa zapne gameObject do ktoreho je tento script vlozeny spusti sa animacia ktora je dopredu vlozena
      * a dalsie podprogramy maju na starosti co sa stane pri stlaceni tlacidiel
      */
 
-    public GameObject MovingUpCube;
-
-    private GameObject Player;
-    private Vector3 HelpPosition;
+    public Rigidbody2D playerRb;
+    public Rigidbody2D MovingUpCubeRb;
     Animator Anim;
-
+    TimeController timeController;
+    float tTimeHelp;
 
     private void Awake()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
+        timeController = gameObject.AddComponent<TimeController>();
     }
 
     void Start()
     {
-        HelpPosition = Player.transform.position;
+        tTimeHelp = timeController.tTime;
 
-
+        MovingUpCubeRb.velocity = new Vector2(0, 0);
 
         Anim = GetComponent<Animator>();
         Anim.SetBool("LevelMenuBttns", false);
@@ -33,7 +33,12 @@ public class LevelMenuController : MonoBehaviour {
 
     private void Update()
     {
-        Player.transform.position = HelpPosition;
+        timeController.tTime = tTimeHelp;
+
+        playerRb.velocity = new Vector2(0, 0);
+        playerRb.gravityScale = 0;
+        
+        MovingUpCubeRb.velocity = new Vector2(0, 0);
     }
 
     public void MainMenuBttn()
