@@ -7,8 +7,7 @@ public class Manager : MonoBehaviour {
     [Header("Change size of ChangingObjects in the script too!")]
     public GameObject[] ChangingObjects;
     public GameObject Player;
-    public float respawnPosition_Min;
-    public float respawnPosition_Max;
+    PlayerController playerCont;
 
     private static int ChangingObjectsAmount = 39;  // <---
     private Vector2[] ChangingObjectsHelpP = new Vector2[ChangingObjectsAmount];
@@ -16,11 +15,16 @@ public class Manager : MonoBehaviour {
     private Rigidbody2D[] rb = new Rigidbody2D[ChangingObjectsAmount];
 
 
+    private void Awake()
+    {
+        playerCont = Player.GetComponent<PlayerController>();
+    }
+
     void Start()
     {
         for (int i = 0; i < ChangingObjectsAmount; i++)
         {
-            rb[i] = ChangingObjects[i].GetComponent<Rigidbody2D>() ?? ChangingObjects[i].AddComponent<Rigidbody2D>();
+            rb[i] = ChangingObjects[i].GetComponent<Rigidbody2D>();// ?? ChangingObjects[i].AddComponent<Rigidbody2D>();
             ChangingObjectsHelpP[i] = ChangingObjects[i].transform.position;
             ChangingObjectsHelpR[i] = ChangingObjects[i].transform.rotation;
         }
@@ -29,7 +33,9 @@ public class Manager : MonoBehaviour {
     void Update()
     {        
         //Respawning moving objects after respawning player
-        if (Player.transform.position.y <= respawnPosition_Min || Player.transform.position.y >= respawnPosition_Max)
+        if (Input.GetKeyDown(KeyCode.R) || playerCont.Touched ||             // press 'R' or player touches object with tag 'TouchingObject'
+            Player.transform.position.y <= playerCont.respawnPosition_Min || // player reaches respawn position 
+            Player.transform.position.y >= playerCont.respawnPosition_Max)
         {
             for (int i = 0; i < ChangingObjectsAmount; i++)
             {

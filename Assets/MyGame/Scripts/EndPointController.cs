@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class EndPointController : MonoBehaviour {
 
@@ -9,8 +10,16 @@ public class EndPointController : MonoBehaviour {
      * sa zapne. Pokracovanie je v scripte LevelMenuController
      */
 
+    public TextMeshProUGUI Timer;
     public GameObject LevelMenuUI;
 
+    TimeController timeCont;
+
+
+    private void Awake()
+    {
+        timeCont = Timer.GetComponent<TimeController>();
+    }
     private void Start()
     {
         LevelMenuUI.SetActive(false);
@@ -20,6 +29,7 @@ public class EndPointController : MonoBehaviour {
     {
         if (collision.tag == "Player")
         {
+            timeCont.keepTiming = false;
             LevelMenuUI.SetActive(true);
         }
     }

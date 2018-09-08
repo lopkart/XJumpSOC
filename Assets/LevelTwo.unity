@@ -2465,12 +2465,12 @@ Prefab:
     - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
         type: 2}
       propertyPath: respawnPosition_Max
-      value: 250
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
         type: 2}
       propertyPath: respawnPosition_Min
-      value: -20
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
         type: 2}
@@ -2667,6 +2667,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114808636010795824, guid: ae74b1d5319f59c44bc136e6d60ba7a2,
+        type: 2}
+      propertyPath: Timer
+      value: 
+      objectReference: {fileID: 838426324}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae74b1d5319f59c44bc136e6d60ba7a2, type: 2}
   m_IsPrefabParent: 0
@@ -4074,6 +4079,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4926628969223188, guid: 2d1101a01c647c64bb9caa62a6b1d3d6,
     type: 2}
   m_PrefabInternal: {fileID: 834616650}
+--- !u!114 &838426324 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114744256766886168, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
+    type: 2}
+  m_PrefabInternal: {fileID: 2137574877}
+  m_Script: {fileID: 1453722849, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
 --- !u!4 &847497610 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4926628969223188, guid: 2d1101a01c647c64bb9caa62a6b1d3d6,
@@ -4148,6 +4159,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1156064087223562, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
     type: 2}
   m_PrefabInternal: {fileID: 463393174}
+--- !u!114 &910689883 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+    type: 2}
+  m_PrefabInternal: {fileID: 463393174}
+  m_Script: {fileID: 11500000, guid: d4b71462644f58848b2f82e31f9615e2, type: 3}
 --- !u!50 &910689885 stripped
 Rigidbody2D:
   m_PrefabParentObject: {fileID: 50926148649000536, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
@@ -5090,11 +5107,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4544874460836312, guid: b067835374c273749ad719421976297c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -26.28
+      value: -25.8
       objectReference: {fileID: 0}
     - target: {fileID: 4544874460836312, guid: b067835374c273749ad719421976297c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4544874460836312, guid: b067835374c273749ad719421976297c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5129,6 +5146,24 @@ Prefab:
     - target: {fileID: 4544874460836312, guid: b067835374c273749ad719421976297c, type: 2}
       propertyPath: m_LocalScale.y
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 114296581578149672, guid: b067835374c273749ad719421976297c,
+        type: 2}
+      propertyPath: playerCont
+      value: 
+      objectReference: {fileID: 910689883}
+    - target: {fileID: 114296581578149672, guid: b067835374c273749ad719421976297c,
+        type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 910689882}
+    - target: {fileID: 1882173201743868, guid: b067835374c273749ad719421976297c, type: 2}
+      propertyPath: m_TagString
+      value: TouchingObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882173201743868, guid: b067835374c273749ad719421976297c, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b067835374c273749ad719421976297c, type: 2}
@@ -10419,7 +10454,7 @@ Prefab:
     - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
         type: 2}
       propertyPath: endForGold
-      value: 31
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
         type: 2}

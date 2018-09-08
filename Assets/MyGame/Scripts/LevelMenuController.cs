@@ -12,20 +12,10 @@ public class LevelMenuController : MonoBehaviour {
 
     public Rigidbody2D playerRb;
     public Rigidbody2D MovingUpCubeRb;
-    public bool Resetted = false;
     Animator Anim;
-    TimeController timeController;
-    float tTimeHelp;
-
-    private void Awake()
-    {
-        timeController = gameObject.AddComponent<TimeController>();
-    }
 
     void Start()
     {
-        tTimeHelp = timeController.tTime;
-
         MovingUpCubeRb.velocity = new Vector2(0, 0);
 
         Anim = GetComponent<Animator>();
@@ -34,8 +24,6 @@ public class LevelMenuController : MonoBehaviour {
 
     private void Update()
     {
-        timeController.tTime = tTimeHelp;
-
         playerRb.velocity = new Vector2(0, 0);
         playerRb.gravityScale = 0;
         
@@ -54,7 +42,6 @@ public class LevelMenuController : MonoBehaviour {
 
     public void ResetLevelBttn()
     {
-        Resetted = true;
         SceneManager.LoadScene(Application.loadedLevel);
     }
 }

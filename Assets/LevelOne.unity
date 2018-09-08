@@ -243,7 +243,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4947876582089332, guid: 421fa123e9207b44792affc8b73fc532, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 63.43
+      value: 80.46391
       objectReference: {fileID: 0}
     - target: {fileID: 4947876582089332, guid: 421fa123e9207b44792affc8b73fc532, type: 2}
       propertyPath: m_LocalPosition.y
@@ -271,7 +271,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4947876582089332, guid: 421fa123e9207b44792affc8b73fc532, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947876582089332, guid: 421fa123e9207b44792affc8b73fc532, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4947876582089332, guid: 421fa123e9207b44792affc8b73fc532, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 421fa123e9207b44792affc8b73fc532, type: 2}
@@ -1056,7 +1064,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4947876582089332, guid: 421fa123e9207b44792affc8b73fc532, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1906953562643534, guid: 421fa123e9207b44792affc8b73fc532, type: 2}
       propertyPath: m_Name
@@ -1969,8 +1977,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 532514728}
   - {fileID: 568435881}
+  - {fileID: 532514728}
   - {fileID: 150337415}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -2114,6 +2122,11 @@ Prefab:
       propertyPath: m_UsedByComposite
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114808636010795824, guid: ae74b1d5319f59c44bc136e6d60ba7a2,
+        type: 2}
+      propertyPath: Timer
+      value: 
+      objectReference: {fileID: 1517441352}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae74b1d5319f59c44bc136e6d60ba7a2, type: 2}
   m_IsPrefabParent: 0
@@ -3157,6 +3170,11 @@ Prefab:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: respawnPosition_Max
+      value: 45
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
   m_IsPrefabParent: 0
@@ -3757,9 +3775,20 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
+        type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1278764917}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb18e3dbb4c13df47bbc69f74f2945bb, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1517441352 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114744256766886168, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
+    type: 2}
+  m_PrefabInternal: {fileID: 1517441351}
+  m_Script: {fileID: 1453722849, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
 --- !u!1 &1532019107 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1972365697998962, guid: aad8640804f81be469696835030c3ccd,

@@ -34,10 +34,14 @@ public class PlayerController : MonoBehaviour {
     [Header("Checkpoint")]
     [HideInInspector]
     public bool checkpointReached = false;
-    public float respawnPosition_Min = -15f;
-    public float respawnPosition_Max = 60f;
+    public float respawnPosition_Min;
+    public float respawnPosition_Max;
     private Vector3 respawnPoint;
     private Vector3 startPoint;
+    [HideInInspector]
+    public bool Touched = false;
+    [HideInInspector]
+    public bool Respawned = false;
 
     [HideInInspector]
     public Rigidbody2D rb;
@@ -116,6 +120,21 @@ public class PlayerController : MonoBehaviour {
             respawnPoint = col.transform.position + new Vector3(0, 3, 0);
             checkpointReached = true;
         }
+
+        if (col.tag == "TouchingObject")
+        {
+            if (checkpointReached)
+            {
+                transform.position = respawnPoint;
+            }
+            else
+            {
+                transform.position = startPoint;
+            }
+
+            Respawned = true;
+            Touched = true;
+        }
     }
     
     //LinedArea
@@ -126,6 +145,7 @@ public class PlayerController : MonoBehaviour {
             LinedBool = true;
         }
     }
+
     void OnTriggerExit2D(Collider2D col)
     {
         if (col.tag == "LinedArea")
@@ -133,7 +153,26 @@ public class PlayerController : MonoBehaviour {
             LinedBool = false;
         }
     }
-    
+
+    public void Respawning()
+    {
+        if (Input.GetKeyDown(KeyCode.R) ||
+            transform.position.y <= respawnPosition_Min || transform.position.y >= respawnPosition_Max)
+        {
+            Respawned = true;
+
+            if (checkpointReached)
+            {
+                transform.position = respawnPoint;
+            }
+            else
+            {
+                transform.position = startPoint;
+            }
+        }
+    }
+
+
 
     /****************************************
      *          F U N C T I O N S           *
@@ -152,7 +191,6 @@ public class PlayerController : MonoBehaviour {
     {
         return Physics2D.OverlapCircle(side[1].position, groundCheckRadius, whatIsGround);
     }
-
 
     bool GroundedNonGround()    // bool na to, aby Hráč nemohol skákať na modrom podklade
     {
@@ -176,17 +214,7 @@ public class PlayerController : MonoBehaviour {
         Movement();
         Jumping();
         Shape();
-
-        if (transform.position.y <= respawnPosition_Min || transform.position.y >= respawnPosition_Max)
-        {
-            if (checkpointReached)
-            {
-                transform.position = respawnPoint;
-            }
-            else
-            {
-                transform.position = startPoint;
-            }   
-        }
+        Respawning();
+        Touched = false;
     }
 }

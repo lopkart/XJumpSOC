@@ -17,6 +17,7 @@ TagManager:
   - CheckPoint
   - LinedArea
   - LevelMenuUI
+  - TouchingObject
   layers:
   - Default
   - TransparentFX

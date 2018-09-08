@@ -61,6 +61,7 @@ MonoBehaviour:
   endForSilver: 10
   endForBronze: 15
   Clock: {fileID: 114718863832351044}
+  Player: {fileID: 0}
 --- !u!114 &114718863832351044
 MonoBehaviour:
   m_ObjectHideFlags: 1
