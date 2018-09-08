@@ -129,10 +129,10 @@ public class PlayerController : MonoBehaviour {
             }
             else
             {
+                Respawned = true;
                 transform.position = startPoint;
             }
 
-            Respawned = true;
             Touched = true;
         }
     }
@@ -159,14 +159,13 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.R) ||
             transform.position.y <= respawnPosition_Min || transform.position.y >= respawnPosition_Max)
         {
-            Respawned = true;
-
             if (checkpointReached)
             {
                 transform.position = respawnPoint;
             }
             else
             {
+                Respawned = true;
                 transform.position = startPoint;
             }
         }
