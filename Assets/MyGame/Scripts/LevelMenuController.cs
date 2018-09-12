@@ -29,19 +29,4 @@ public class LevelMenuController : MonoBehaviour {
         
         MovingUpCubeRb.velocity = new Vector2(0, 0);
     }
-
-    public void MainMenuBttn()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-
-    public void NextLevelBttn()
-    {
-        Application.LoadLevel(Application.loadedLevel + 1);
-    }
-
-    public void ResetLevelBttn()
-    {
-        SceneManager.LoadScene(Application.loadedLevel);
-    }
 }

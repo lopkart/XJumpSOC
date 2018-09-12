@@ -11,12 +11,14 @@ public class TimeController : MonoBehaviour {
     public int endForBronze;    // how much second will be when the Player can get bronze medal
     public Image Clock;
     public GameObject Player;
+    public GameObject Menuses;
     [HideInInspector]
     public float tTime;
     [HideInInspector]
     public bool keepTiming = true;
 
     PlayerController playerCont;
+    MenusesController menusesCont;
     private TextMeshProUGUI timerText;
     private Color colorForGoldMedal = new Color32(0, 255, 0, 255);
     private Color colorForSilverMedal = new Color32(255, 255, 0, 255);
@@ -28,7 +30,17 @@ public class TimeController : MonoBehaviour {
 
     void Timing()
     {
-        if(keepTiming)
+        if(Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.P)
+        {
+            keepTiming = false;
+        }
+
+        if(menusesCont.Resumed)
+        {
+            
+        }
+
+        if (keepTiming)
         {
             tTime = Time.time - startTime;
 
@@ -43,6 +55,7 @@ public class TimeController : MonoBehaviour {
     void Awake()
     {
         playerCont = Player.GetComponent<PlayerController>();
+        menusesCont = Menuses.GetComponent<MenusesController>();
         timerText = GetComponent<TextMeshProUGUI>() ?? gameObject.AddComponent<TextMeshProUGUI>();
         timerText.color = colorForGoldMedal;
     }
