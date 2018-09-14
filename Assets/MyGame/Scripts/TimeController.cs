@@ -30,18 +30,28 @@ public class TimeController : MonoBehaviour {
 
     void Timing()
     {
-        if(Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.P)
+        if(Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.P))
         {
             keepTiming = false;
+
+            playerCont.moveSpeed = 0.0f;
+            playerCont.JumpVelocity = 0.0f;
+            playerCont.rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
         }
 
         if(menusesCont.Resumed)
         {
-            
+            keepTiming = true;
+            startTime = Time.time - tTime;
+
+            playerCont.JumpVelocity = 14.0f;
+            playerCont.moveSpeed = 9.0f;
+            playerCont.rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
         }
 
         if (keepTiming)
         {
+            menusesCont.Resumed = false;
             tTime = Time.time - startTime;
 
             // Changing time

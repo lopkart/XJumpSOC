@@ -39,12 +39,6 @@ public class MenusesController : MonoBehaviour {
 
     public void PreviousLevelBttn()
     {
-        // TODO: some animation
-    }
-
-
-    private void Update()
-    {
-        //Resumed = false;
+        Application.LoadLevel(Application.loadedLevel - 1);
     }
 }

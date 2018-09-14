@@ -57,11 +57,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d439c4e6e6bf5df49ad76a5dd000f878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endForGold: 5
-  endForSilver: 10
-  endForBronze: 15
+  endForGold: 34
+  endForSilver: 37
+  endForBronze: 48
   Clock: {fileID: 114718863832351044}
   Player: {fileID: 0}
+  Menuses: {fileID: 0}
+  tTime: 0
+  keepTiming: 1
 --- !u!114 &114718863832351044
 MonoBehaviour:
   m_ObjectHideFlags: 1

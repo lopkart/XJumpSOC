@@ -54,18 +54,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChangingObjects:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   Player: {fileID: 0}
 --- !u!114 &114286746988424318
 MonoBehaviour:
