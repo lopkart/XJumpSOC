@@ -15,9 +15,12 @@ public class TouchingObjectController : MonoBehaviour {
     [HideInInspector]
     public Rigidbody2D rb2D;
 
+    private Vector3 startPosition;
+
 
     private void Start()
     {
+        startPosition = gameObject.transform.position;
         rb2D = GetComponent<Rigidbody2D>() ?? gameObject.AddComponent<Rigidbody2D>();
     }
 
@@ -32,6 +35,9 @@ public class TouchingObjectController : MonoBehaviour {
         if (col.tag == "Player")
         {
             Multiplier = 0.0f;
+            rb2D.bodyType = RigidbodyType2D.Static;
+            rb2D.bodyType = RigidbodyType2D.Dynamic;
+            gameObject.transform.position = startPosition;
         }
     }
 }

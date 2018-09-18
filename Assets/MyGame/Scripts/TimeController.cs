@@ -36,7 +36,7 @@ public class TimeController : MonoBehaviour {
 
             playerCont.moveSpeed = 0.0f;
             playerCont.JumpVelocity = 0.0f;
-            playerCont.rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+            playerCont.rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
 
         if(menusesCont.Resumed)

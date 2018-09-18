@@ -10,8 +10,8 @@ public class Manager : MonoBehaviour {
     PlayerController playerCont;
 
     private static int ChangingObjectsAmount = 39;  // <---
-    private Vector2[] ChangingObjectsHelpP = new Vector2[ChangingObjectsAmount];
-    private Quaternion[] ChangingObjectsHelpR = new Quaternion[ChangingObjectsAmount];
+    private Vector2[] ChangingObjectsHelpP = new Vector2[ChangingObjectsAmount];        // position of the objects
+    private Quaternion[] ChangingObjectsHelpR = new Quaternion[ChangingObjectsAmount];  // rotation of the objects
     private Rigidbody2D[] rb = new Rigidbody2D[ChangingObjectsAmount];
 
 
@@ -24,17 +24,17 @@ public class Manager : MonoBehaviour {
     {
         for (int i = 0; i < ChangingObjectsAmount; i++)
         {
-            rb[i] = ChangingObjects[i].GetComponent<Rigidbody2D>();// ?? ChangingObjects[i].AddComponent<Rigidbody2D>();
+            rb[i] = ChangingObjects[i].GetComponent<Rigidbody2D>() ?? ChangingObjects[i].AddComponent<Rigidbody2D>();
             ChangingObjectsHelpP[i] = ChangingObjects[i].transform.position;
             ChangingObjectsHelpR[i] = ChangingObjects[i].transform.rotation;
         }
     }
 
     void Update()
-    {        
+    {      
         //Respawning moving objects after respawning player
-        if (Input.GetKeyDown(KeyCode.R) || playerCont.Touched ||             // press 'R' or player touches object with tag 'TouchingObject'
-            Player.transform.position.y <= playerCont.respawnPosition_Min || // player reaches respawn position 
+        if (Input.GetKeyDown(KeyCode.R) ||                                      // press 'R' or player touches object with tag 'TouchingObject'
+            Player.transform.position.y <= playerCont.respawnPosition_Min ||    // player reaches respawn position 
             Player.transform.position.y >= playerCont.respawnPosition_Max)
         {
             for (int i = 0; i < ChangingObjectsAmount; i++)

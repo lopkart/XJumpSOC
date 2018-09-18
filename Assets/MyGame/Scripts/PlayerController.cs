@@ -39,8 +39,6 @@ public class PlayerController : MonoBehaviour {
     private Vector3 respawnPoint;
     private Vector3 startPoint;
     [HideInInspector]
-    public bool Touched = false;
-    [HideInInspector]
     public bool Respawned = false;
 
     [HideInInspector]
@@ -132,8 +130,6 @@ public class PlayerController : MonoBehaviour {
                 Respawned = true;
                 transform.position = startPoint;
             }
-
-            Touched = true;
         }
     }
     
@@ -214,6 +210,5 @@ public class PlayerController : MonoBehaviour {
         Jumping();
         Shape();
         Respawning();
-        Touched = false;
     }
 }
