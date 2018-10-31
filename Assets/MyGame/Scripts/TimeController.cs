@@ -58,7 +58,7 @@ public class TimeController : MonoBehaviour {
             int minutes = ((int)tTime / 60);
             int seconds = ((int)tTime % 60);
 
-            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);                     // Formating and overwriting timerText each frame
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);           // Formating and overwriting timerText each frame
         }
     }
 

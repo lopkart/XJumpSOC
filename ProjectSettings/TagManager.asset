@@ -18,6 +18,7 @@ TagManager:
   - LinedArea
   - LevelMenuUI
   - TouchingObject
+  - Sensor
   layers:
   - Default
   - TransparentFX

@@ -37,7 +37,14 @@ public class TouchingObjectController : MonoBehaviour {
             Multiplier = 0.0f;
             rb2D.bodyType = RigidbodyType2D.Static;
             rb2D.bodyType = RigidbodyType2D.Dynamic;
-            gameObject.transform.position = startPosition;
+            if(gameObject.layer != 8)
+            {
+                gameObject.transform.position = startPosition;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
