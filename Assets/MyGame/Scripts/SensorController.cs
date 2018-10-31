@@ -5,7 +5,7 @@ using UnityEngine;
 public class SensorController : MonoBehaviour {
 
     // Sensor that Player enteres to some area
-    public static int EnemyCount = 2;
+    private static int EnemyCount = 3;
 
     public Rigidbody2D[] Enemy = new Rigidbody2D[EnemyCount];
 
