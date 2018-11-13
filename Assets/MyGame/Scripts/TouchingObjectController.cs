@@ -9,30 +9,32 @@ public class TouchingObjectController : MonoBehaviour {
      * sa zapne. Pokracovanie je v scripte LevelMenuController.
      * Objekt sa pohybuje smerom nahor, ale ak sa LevelMenu zapne automaticky sa tento objekt zastaví.
      */
-    private static int EnemyCount = 2;
+    //private static int EnemyCount = 2;
     private Vector3 startPosition;
-    private Vector3[] startPositionOfEnemies = new Vector3[EnemyCount];
+    //private Vector3[] startPositionOfEnemies = new Vector3[EnemyCount];
+    private LayerMask TouchingObject;
 
+    //[HideInInspector]
     [HideInInspector]
     public float Multiplier = 0.12f;
     [HideInInspector]
     public Rigidbody2D rb2D;
-    public GameObject[] Enemies = new GameObject[EnemyCount];
-    public Rigidbody2D[] EnemiesRb2D = new Rigidbody2D[EnemyCount];
+    //public GameObject[] Enemies = new GameObject[EnemyCount];
+    //public Rigidbody2D[] EnemiesRb2D = new Rigidbody2D[EnemyCount];
 
 
     private void Start()
     {
         startPosition = gameObject.transform.position;
         rb2D = GetComponent<Rigidbody2D>() ?? gameObject.AddComponent<Rigidbody2D>();
-
+        /*
         if (Enemies != null)
         {
             for (int i = 0; i < EnemyCount; i++)
             {
                 startPositionOfEnemies[i] = Enemies[i].transform.position;
             }
-        }
+        }*/
     }
 
     private void Update()
@@ -48,21 +50,24 @@ public class TouchingObjectController : MonoBehaviour {
     {
         if (col.tag == "Player")
         {
-            if(Enemies != null)
+            /*
+            if (Enemies != null)
             {
                 for (int i = 0; i < EnemyCount; i++)
                 {
-                    gameObject.transform.position = startPosition;
-                    Enemies[i].transform.position = startPositionOfEnemies[i];
-
                     rb2D.bodyType = RigidbodyType2D.Static;
                     EnemiesRb2D[i].bodyType = RigidbodyType2D.Static;
 
-                    //rb2D.bodyType = RigidbodyType2D.Dynamic;
-                    //EnemiesRb2D[i].bodyType = RigidbodyType2D.Dynamic;
+                    gameObject.transform.position = startPosition;
+                    Enemies[i].transform.position = startPositionOfEnemies[i];
+
+                    /*if(Enemies[EnemyCount-1].transform.position == startPositionOfEnemies[EnemyCount - 1])
+                    {
+                        playerTouched = false;
+                    }
                 }
-                //rb2D.bodyType = RigidbodyType2D.Dynamic;
-            }
+                // rb2D.bodyType = RigidbodyType2D.Dynamic;
+            }*/
 
             if (gameObject.layer != 8)
             {

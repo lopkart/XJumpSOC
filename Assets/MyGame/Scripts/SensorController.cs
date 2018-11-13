@@ -22,10 +22,9 @@ public class SensorController : MonoBehaviour {
     }
 
 
-    // TODO: dokoncit enemy
     void Start ()
     {
-        //foreach (Rigidbody2D rb in Enemy)
+
     }
 	
 	void Update () {

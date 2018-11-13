@@ -254,19 +254,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 71358482}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 661314168}
-  - {fileID: 89150293}
-  EnemiesRb2D:
-  - {fileID: 661314172}
-  - {fileID: 89150297}
 --- !u!58 &71358485
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -399,19 +393,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 89150293}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 661314168}
-  - {fileID: 71358482}
-  EnemiesRb2D:
-  - {fileID: 661314172}
-  - {fileID: 71358486}
 --- !u!58 &89150296
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -854,7 +842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &201374156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1002,7 +990,7 @@ Prefab:
     - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
         type: 2}
       propertyPath: ChangingObjects.Array.size
-      value: 8
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 4430528336430860, guid: 551ba88fa8a27c04884ed0009882491f, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1086,6 +1074,276 @@ Prefab:
       propertyPath: ChangingObjects.Array.data[7]
       value: 
       objectReference: {fileID: 1366714688}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[8]
+      value: 
+      objectReference: {fileID: 661314168}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[9]
+      value: 
+      objectReference: {fileID: 71358482}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[10]
+      value: 
+      objectReference: {fileID: 89150293}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[11]
+      value: 
+      objectReference: {fileID: 363656851}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[12]
+      value: 
+      objectReference: {fileID: 805712615}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[13]
+      value: 
+      objectReference: {fileID: 393657813}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[14]
+      value: 
+      objectReference: {fileID: 1604231974}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[15]
+      value: 
+      objectReference: {fileID: 1054314994}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[16]
+      value: 
+      objectReference: {fileID: 891737337}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[17]
+      value: 
+      objectReference: {fileID: 1619372696}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[18]
+      value: 
+      objectReference: {fileID: 1001789830}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[19]
+      value: 
+      objectReference: {fileID: 2074230274}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[20]
+      value: 
+      objectReference: {fileID: 1075006954}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[21]
+      value: 
+      objectReference: {fileID: 1897743422}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[22]
+      value: 
+      objectReference: {fileID: 2135208246}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[23]
+      value: 
+      objectReference: {fileID: 1590356839}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[24]
+      value: 
+      objectReference: {fileID: 1694324061}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: ChangingObjects.Array.data[25]
+      value: 
+      objectReference: {fileID: 1871322194}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[0]
+      value: 
+      objectReference: {fileID: 661314168}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[1]
+      value: 
+      objectReference: {fileID: 71358482}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[2]
+      value: 
+      objectReference: {fileID: 89150293}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[3]
+      value: 
+      objectReference: {fileID: 363656851}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[4]
+      value: 
+      objectReference: {fileID: 805712615}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[5]
+      value: 
+      objectReference: {fileID: 393657813}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[6]
+      value: 
+      objectReference: {fileID: 1604231974}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[7]
+      value: 
+      objectReference: {fileID: 1054314994}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[8]
+      value: 
+      objectReference: {fileID: 891737337}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[9]
+      value: 
+      objectReference: {fileID: 1619372696}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[10]
+      value: 
+      objectReference: {fileID: 1001789830}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[11]
+      value: 
+      objectReference: {fileID: 2074230274}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[12]
+      value: 
+      objectReference: {fileID: 1075006954}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[13]
+      value: 
+      objectReference: {fileID: 1897743422}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[14]
+      value: 
+      objectReference: {fileID: 2135208246}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[15]
+      value: 
+      objectReference: {fileID: 1590356839}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[16]
+      value: 
+      objectReference: {fileID: 1694324061}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: TouchingObject.Array.data[17]
+      value: 
+      objectReference: {fileID: 1871322194}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[0]
+      value: 
+      objectReference: {fileID: 661314171}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[1]
+      value: 
+      objectReference: {fileID: 71358485}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[2]
+      value: 
+      objectReference: {fileID: 89150296}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[3]
+      value: 
+      objectReference: {fileID: 363656854}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[4]
+      value: 
+      objectReference: {fileID: 805712618}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[5]
+      value: 
+      objectReference: {fileID: 393657816}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[6]
+      value: 
+      objectReference: {fileID: 1604231977}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[7]
+      value: 
+      objectReference: {fileID: 1054314997}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[8]
+      value: 
+      objectReference: {fileID: 891737340}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[9]
+      value: 
+      objectReference: {fileID: 1619372699}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[10]
+      value: 
+      objectReference: {fileID: 1001789833}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[11]
+      value: 
+      objectReference: {fileID: 2074230277}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[12]
+      value: 
+      objectReference: {fileID: 1075006957}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[13]
+      value: 
+      objectReference: {fileID: 1897743425}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[14]
+      value: 
+      objectReference: {fileID: 2135208249}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[15]
+      value: 
+      objectReference: {fileID: 1590356842}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[16]
+      value: 
+      objectReference: {fileID: 1694324064}
+    - target: {fileID: 114281562866781370, guid: 551ba88fa8a27c04884ed0009882491f,
+        type: 2}
+      propertyPath: enemyCol2D.Array.data[17]
+      value: 
+      objectReference: {fileID: 1871322197}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 551ba88fa8a27c04884ed0009882491f, type: 2}
   m_IsPrefabParent: 0
@@ -1600,19 +1858,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 363656851}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 805712615}
-  - {fileID: 393657813}
-  EnemiesRb2D:
-  - {fileID: 805712619}
-  - {fileID: 393657817}
 --- !u!58 &363656854
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1807,19 +2059,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 393657813}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 363656851}
-  - {fileID: 805712615}
-  EnemiesRb2D:
-  - {fileID: 363656855}
-  - {fileID: 805712619}
 --- !u!58 &393657816
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2934,19 +3180,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 661314168}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 71358482}
-  - {fileID: 89150293}
-  EnemiesRb2D:
-  - {fileID: 71358486}
-  - {fileID: 89150297}
 --- !u!58 &661314171
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3396,19 +3636,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 805712615}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 363656851}
-  - {fileID: 393657813}
-  EnemiesRb2D:
-  - {fileID: 363656855}
-  - {fileID: 393657817}
 --- !u!58 &805712618
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3627,19 +3861,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 891737337}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 1604231974}
-  - {fileID: 1054314994}
-  EnemiesRb2D:
-  - {fileID: 1604231978}
-  - {fileID: 1054314998}
 --- !u!58 &891737340
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4105,19 +4333,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1001789830}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 1619372696}
-  - {fileID: 2074230274}
-  EnemiesRb2D:
-  - {fileID: 1619372700}
-  - {fileID: 2074230278}
 --- !u!58 &1001789833
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4378,19 +4600,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1054314994}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 1604231974}
-  - {fileID: 891737337}
-  EnemiesRb2D:
-  - {fileID: 1604231978}
-  - {fileID: 891737341}
 --- !u!58 &1054314997
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4523,19 +4739,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1075006954}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 1897743422}
-  - {fileID: 2135208246}
-  EnemiesRb2D:
-  - {fileID: 1897743426}
-  - {fileID: 2135208250}
 --- !u!58 &1075006957
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5968,19 +6178,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1590356839}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 1694324061}
-  - {fileID: 1871322194}
-  EnemiesRb2D:
-  - {fileID: 1694324065}
-  - {fileID: 1871322198}
 --- !u!58 &1590356842
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6206,19 +6410,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1604231974}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 1054314994}
-  - {fileID: 891737337}
-  EnemiesRb2D:
-  - {fileID: 1054314998}
-  - {fileID: 891737341}
 --- !u!58 &1604231977
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6351,19 +6549,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1619372696}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 1001789830}
-  - {fileID: 2074230274}
-  EnemiesRb2D:
-  - {fileID: 1001789834}
-  - {fileID: 2074230278}
 --- !u!58 &1619372699
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6769,19 +6961,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1694324061}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 1590356839}
-  - {fileID: 1871322194}
-  EnemiesRb2D:
-  - {fileID: 1590356843}
-  - {fileID: 1871322198}
 --- !u!58 &1694324064
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7437,19 +7623,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1871322194}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 1590356839}
-  - {fileID: 1694324061}
-  EnemiesRb2D:
-  - {fileID: 1590356843}
-  - {fileID: 1694324065}
 --- !u!58 &1871322197
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7582,19 +7762,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1897743422}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 1075006954}
-  - {fileID: 2135208246}
-  EnemiesRb2D:
-  - {fileID: 1075006958}
-  - {fileID: 2135208250}
 --- !u!58 &1897743425
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8058,11 +8232,11 @@ MonoBehaviour:
     lineCount: 2
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -8122,19 +8296,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2074230274}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 1619372696}
-  - {fileID: 1001789830}
-  EnemiesRb2D:
-  - {fileID: 1619372700}
-  - {fileID: 1001789834}
 --- !u!58 &2074230277
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8563,19 +8731,13 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2135208246}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Multiplier: 0.12
   rb2D: {fileID: 0}
-  Enemies:
-  - {fileID: 1075006954}
-  - {fileID: 1897743422}
-  EnemiesRb2D:
-  - {fileID: 1075006958}
-  - {fileID: 1897743426}
 --- !u!58 &2135208249
 CircleCollider2D:
   m_ObjectHideFlags: 0
