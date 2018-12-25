@@ -42,6 +42,11 @@ public class Manager : MonoBehaviour
             {
                 rb[i].bodyType = RigidbodyType2D.Static;
 
+                if(ChangingObjects[i].layer != 10)
+                {
+                    rb[i].bodyType = RigidbodyType2D.Dynamic;
+                }
+
                 ChangingObjects[i].transform.position = ChangingObjectsHelpP[i];
                 ChangingObjects[i].transform.rotation = ChangingObjectsHelpR[i];
             }

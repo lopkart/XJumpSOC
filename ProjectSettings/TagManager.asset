@@ -19,6 +19,7 @@ TagManager:
   - LevelMenuUI
   - TouchingObject
   - Sensor
+  - Coin
   layers:
   - Default
   - TransparentFX

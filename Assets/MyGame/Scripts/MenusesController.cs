@@ -9,8 +9,7 @@ public class MenusesController : MonoBehaviour {
     public bool Resumed = false;
     public GameObject PauseMenu;
 
-
-
+    
     public void MainMenuBttn()
     {
         SceneManager.LoadScene("MainMenu");

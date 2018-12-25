@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour {
 
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour {
     public float groundCheckRadius;                     // veľkosť dieťaťa            
     private bool isJumping;                             // bool na to či Hráč práve skáče alebo nie --> úprava na dvojitý skok
 
-    [Header("Ability")]
+    [Header("Abilities")]
     public Transform[] side = new Transform[2];
 
     [HideInInspector]
@@ -40,6 +41,10 @@ public class PlayerController : MonoBehaviour {
     private Vector3 startPoint;
     [HideInInspector]
     public bool Respawned = false;
+
+    [Header("Coins")]
+    public TextMeshProUGUI CoinText;
+    private int coins = 0;
 
     [HideInInspector]
     public Rigidbody2D rb;
@@ -110,7 +115,7 @@ public class PlayerController : MonoBehaviour {
     }
 
 
-    //Checkpoint
+    //Checkpoint & Respawn when enemy touch Player
     public void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "CheckPoint")
@@ -131,6 +136,12 @@ public class PlayerController : MonoBehaviour {
                 transform.position = startPoint;
             }
         }
+
+        if(col.tag == "Coin")
+        {
+            Destroy(GameObject.FindGameObjectWithTag("Coin"));
+            coins += 1;
+        }
     }
     
     //LinedArea
@@ -150,6 +161,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    //Respawning
     public void Respawning()
     {
         if (Input.GetKeyDown(KeyCode.R) ||
@@ -166,7 +178,6 @@ public class PlayerController : MonoBehaviour {
             }
         }
     }
-
 
 
     /****************************************
@@ -210,5 +221,7 @@ public class PlayerController : MonoBehaviour {
         Jumping();
         Shape();
         Respawning();
+
+        CoinText.text = "Coins: " + coins;
     }
 }
