@@ -34,8 +34,8 @@ public class TimeController : MonoBehaviour {
         {
             keepTiming = false;
 
-            playerCont.moveSpeed = 0.0f;
-            playerCont.JumpVelocity = 0.0f;
+            //playerCont.moveSpeed = 0.0f;
+            //playerCont.JumpVelocity = 0.0f;
             playerCont.rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
 
@@ -44,8 +44,8 @@ public class TimeController : MonoBehaviour {
             keepTiming = true;
             startTime = Time.time - tTime;
 
-            playerCont.JumpVelocity = 14.0f;
-            playerCont.moveSpeed = 9.0f;
+            //playerCont.JumpVelocity = 14.0f;
+            //playerCont.moveSpeed = 9.0f;
             playerCont.rb.constraints = RigidbodyConstraints2D.None | RigidbodyConstraints2D.FreezeRotation;
         }
 

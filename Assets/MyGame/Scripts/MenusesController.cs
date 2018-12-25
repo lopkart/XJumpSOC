@@ -21,7 +21,7 @@ public class MenusesController : MonoBehaviour {
     }
 
     public void ResetLevelBttn()
-    {
+    {     
         SceneManager.LoadScene(Application.loadedLevel);
     }
 
@@ -39,5 +39,13 @@ public class MenusesController : MonoBehaviour {
     public void PreviousLevelBttn()
     {
         Application.LoadLevel(Application.loadedLevel - 1);
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+
+        }
     }
 }
