@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50949807823697964}
   m_Layer: 12
   m_Name: HoloHexagonRed
-  m_TagString: Untagged
+  m_TagString: MovingObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -374,6 +374,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 10a5f59bca67e4641ba3268bbb9cd4b5, type: 2}
   m_StaticBatchInfo:

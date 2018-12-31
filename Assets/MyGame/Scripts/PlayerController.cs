@@ -28,19 +28,24 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Abilities")]
     public Transform[] side = new Transform[2];
-
     [HideInInspector]
     public bool LinedBool = false;
 
-    [Header("Checkpoint")]
-    [HideInInspector]
-    public bool checkpointReached = false;
+    [Header("Checkpoint & Respawning")]
     public float respawnPosition_Min;
     public float respawnPosition_Max;
-    private Vector3 respawnPoint;
-    private Vector3 startPoint;
+    [HideInInspector]
+    public Vector3 respawnPoint;
+    [HideInInspector]
+    public Vector3 startPoint;
+    [HideInInspector]
+    public bool checkpointReached = false;
     [HideInInspector]
     public bool Respawned = false;
+    private Vector3 startPlayerScale;
+    private Vector3 checkpointPlayerScale;
+    private float startPlayerMass;
+    private float checkpointPlayerMass;
 
     [Header("Coins")]
     public TextMeshProUGUI CoinText;
@@ -98,7 +103,7 @@ public class PlayerController : MonoBehaviour {
         rb.velocity = Movement;
     }
 
-
+    /*
     void Shape()
     {
         //bool isSmall = false;
@@ -106,14 +111,16 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey(KeyCode.Q))
         {
             gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+            rb.mass = 2;
         }
 
         if (Input.GetKey(KeyCode.E))
         {
             gameObject.transform.localScale = new Vector3(1, 1, 1);
+            rb.mass = 5;
         }
     }
-
+    */
 
     //Checkpoint & Respawn when enemy touch Player
     public void OnTriggerEnter2D(Collider2D col)
@@ -122,22 +129,33 @@ public class PlayerController : MonoBehaviour {
         {
             respawnPoint = col.transform.position + new Vector3(0, 3, 0);
             checkpointReached = true;
+            checkpointPlayerMass = rb.mass;
+            checkpointPlayerScale = transform.localScale;
         }
 
         if (col.tag == "TouchingObject")
         {
             if (checkpointReached)
             {
+                rb.bodyType = RigidbodyType2D.Static;
                 transform.position = respawnPoint;
+                rb.bodyType = RigidbodyType2D.Dynamic;
+                transform.localScale = checkpointPlayerScale;
+                rb.mass = checkpointPlayerMass;
             }
             else
             {
                 Respawned = true;
+                rb.bodyType = RigidbodyType2D.Static;
                 transform.position = startPoint;
-            }
+                rb.bodyType = RigidbodyType2D.Dynamic;
+                transform.localScale = startPlayerScale;
+                rb.mass = startPlayerMass;
+            }            
         }
 
-        if(col.tag == "Coin")
+
+        if (col.tag == "Coin")
         {
             Destroy(GameObject.FindGameObjectWithTag("Coin"));
             coins += 1;
@@ -169,16 +187,23 @@ public class PlayerController : MonoBehaviour {
         {
             if (checkpointReached)
             {
+                rb.bodyType = RigidbodyType2D.Static;
                 transform.position = respawnPoint;
+                rb.bodyType = RigidbodyType2D.Dynamic;
+                transform.localScale = checkpointPlayerScale;
+                rb.mass = checkpointPlayerMass;
             }
             else
             {
                 Respawned = true;
+                rb.bodyType = RigidbodyType2D.Static;
                 transform.position = startPoint;
+                rb.bodyType = RigidbodyType2D.Dynamic;
+                transform.localScale = startPlayerScale;
+                rb.mass = startPlayerMass;
             }
         }
     }
-
 
     /****************************************
      *          F U N C T I O N S           *
@@ -209,17 +234,20 @@ public class PlayerController : MonoBehaviour {
      ****************************************/
     void Start()
     {
+        startPlayerScale = transform.localScale;
+        startPoint = transform.position;
+
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
 
-        startPoint = transform.position;        
+        startPlayerMass = rb.mass;
     }
 
     void Update()
     {
         Movement();
         Jumping();
-        Shape();
+        //Shape();
         Respawning();
 
         CoinText.text = "Coins: " + coins;

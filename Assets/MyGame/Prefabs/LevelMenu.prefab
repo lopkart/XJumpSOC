@@ -47,7 +47,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1465842655042086
 GameObject:
   m_ObjectHideFlags: 1
@@ -193,7 +193,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRb: {fileID: 0}
   MovingUpCubeRb: {fileID: 0}
-  Resetted: 0
 --- !u!114 &114378113707379598
 MonoBehaviour:
   m_ObjectHideFlags: 1

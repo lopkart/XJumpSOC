@@ -12,18 +12,13 @@ public class PointingArrowController : MonoBehaviour {
 
     private Transform target;
 
-
-    // Use this for initialization
-    void Start () {
-		
-	}
 	
 	// Update is called once per frame
 	void Update ()
     {
         //Oprava velkosti ukazovacej sipky pri zmene velkosti hraca
-        if (Player.transform.localScale == new Vector3(1, 1, 1)) PointingArrow.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);    
-        else if (Player.transform.localScale == new Vector3(0.5f, 0.5f, 0.5f)) PointingArrow.transform.localScale = new Vector3(1, 1, 1);
+        if (Player.transform.localScale == new Vector3(1f, 1f, 1f)) PointingArrow.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);    
+        else if (Player.transform.localScale == new Vector3(0.5f, 0.5f, 0.5f)) PointingArrow.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
 
         //Nastavenie uhlu ukazovacej sipky
         if (Coin == null) target = EndCheckpoint;

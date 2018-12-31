@@ -20,6 +20,9 @@ TagManager:
   - TouchingObject
   - Sensor
   - Coin
+  - StopSensor
+  - StartSensor
+  - MovingObject
   layers:
   - Default
   - TransparentFX

@@ -92,7 +92,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  Player: {fileID: 0}
+  Player: {fileID: 1156064087223562, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
 --- !u!114 &114286746988424318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,4 +104,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a070eb028734c5d47bb4b1f9911f9f2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenu: {fileID: 0}
+  PauseMenu: {fileID: 1145485506093260, guid: 8bb74333caac8c04eaa02f2b716a8d37, type: 2}

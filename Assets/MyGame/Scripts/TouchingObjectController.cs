@@ -22,7 +22,6 @@ public class TouchingObjectController : MonoBehaviour {
     {
         startPosition = gameObject.transform.position;
         rb2D = GetComponent<Rigidbody2D>() ?? gameObject.AddComponent<Rigidbody2D>();
-
     }
 
     private void Update()
@@ -43,6 +42,11 @@ public class TouchingObjectController : MonoBehaviour {
                 rb2D.bodyType = RigidbodyType2D.Static;
                 gameObject.transform.position = startPosition;
                 rb2D.bodyType = RigidbodyType2D.Dynamic;
+            }
+            else
+            {
+                rb2D.bodyType = RigidbodyType2D.Static;
+                gameObject.transform.position = startPosition;
             }
         }
     }

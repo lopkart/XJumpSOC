@@ -3902,7 +3902,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 689042432}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -9995,6 +9995,18 @@ Prefab:
       propertyPath: CoinText
       value: 
       objectReference: {fileID: 1849675921}
+    - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
   m_IsPrefabParent: 0
