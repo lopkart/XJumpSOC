@@ -7,7 +7,7 @@ public class MenusesController : MonoBehaviour {
 
     [HideInInspector]
     public bool Resumed = false;
-    public GameObject PauseMenu;
+    private GameObject PauseMenu;
 
     
     public void MainMenuBttn()
@@ -41,11 +41,18 @@ public class MenusesController : MonoBehaviour {
         Application.LoadLevel(Application.loadedLevel - 1);
     }
 
+
+    private void Start()
+    {
+        PauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
+        PauseMenu.SetActive(false);
+    }
+
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.P))
         {
-
+            PauseMenu.SetActive(true);
         }
     }
 }

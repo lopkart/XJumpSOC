@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
-
+    
     public static int ChangingObjectsAmount = 13;  // <---
     private Vector2[] ChangingObjectsHelpP = new Vector2[ChangingObjectsAmount];        // position of the objects
     private Quaternion[] ChangingObjectsHelpR = new Quaternion[ChangingObjectsAmount];  // rotation of the objects
@@ -73,4 +73,5 @@ public class Manager : MonoBehaviour
             }
         }
     }
+    
 }

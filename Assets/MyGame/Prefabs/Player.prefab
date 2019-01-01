@@ -429,6 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c15d823cd7a08149a8198984d4a357a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
   PlayerBlue: {fileID: 2100000, guid: 4ae9062188e07bf4984fd6824ffde5bb, type: 2}
   PlayerYellow: {fileID: 2100000, guid: de272e953d8f61f4fac09f84ec946c43, type: 2}
   PlayerGreen: {fileID: 2100000, guid: d49a3dfc251d0e44697f1b7c0230e666, type: 2}
@@ -438,7 +439,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156064087223562}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c2b1c7b37e04c04b896a4539e693372, type: 3}
   m_Name: 
@@ -491,7 +492,10 @@ MonoBehaviour:
   startPoint: {x: 0, y: 0, z: 0}
   checkpointReached: 0
   Respawned: 0
-  startPlayerScale: {x: 0, y: 0, z: 0}
+  respawningObjs: []
+  respawningRbs: []
+  startPositionOfRespawningObjs: []
+  startRotationOfRespawningObjs: []
   CoinText: {fileID: 0}
   rb: {fileID: 0}
 --- !u!124 &124017525631774056

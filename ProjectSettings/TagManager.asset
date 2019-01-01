@@ -23,6 +23,8 @@ TagManager:
   - StopSensor
   - StartSensor
   - MovingObject
+  - PauseMenu
+  - RandomMovingObjects
   layers:
   - Default
   - TransparentFX

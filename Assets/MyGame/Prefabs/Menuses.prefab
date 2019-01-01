@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 114614158896756842}
   m_Layer: 5
   m_Name: PauseMenu
-  m_TagString: Untagged
+  m_TagString: PauseMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -452,7 +452,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resumed: 0
-  PauseMenu: {fileID: 1858418144054268}
 --- !u!114 &114102629853938798
 MonoBehaviour:
   m_ObjectHideFlags: 1

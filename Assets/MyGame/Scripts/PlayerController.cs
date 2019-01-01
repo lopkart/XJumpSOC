@@ -31,21 +31,29 @@ public class PlayerController : MonoBehaviour {
     [HideInInspector]
     public bool LinedBool = false;
 
+    //Enemies
+    public LayerMask EnemiesMask;
+
     [Header("Checkpoint & Respawning")]
-    public float respawnPosition_Min;
-    public float respawnPosition_Max;
+    public float respawnPosition_Min;  //
+    public float respawnPosition_Max;  //
     [HideInInspector]
-    public Vector3 respawnPoint;
+    public Vector3 respawnPoint;    //
     [HideInInspector]
-    public Vector3 startPoint;
+    public Vector3 startPoint;  //
     [HideInInspector]
     public bool checkpointReached = false;
     [HideInInspector]
-    public bool Respawned = false;
-    private Vector3 startPlayerScale;
-    private Vector3 checkpointPlayerScale;
-    private float startPlayerMass;
-    private float checkpointPlayerMass;
+    public bool Respawned = false;  // used in TimeController
+    public Vector3 startPlayerScale;
+    public Vector3 checkpointPlayerScale;
+    public float startPlayerMass;
+    public float checkpointPlayerMass;
+
+    public GameObject[] respawningObjs;
+    public Rigidbody2D[] respawningRbs;
+    public Vector2[] startPositionOfRespawningObjs;
+    public Quaternion[] startRotationOfRespawningObjs;
 
     [Header("Coins")]
     public TextMeshProUGUI CoinText;
@@ -133,8 +141,10 @@ public class PlayerController : MonoBehaviour {
             checkpointPlayerScale = transform.localScale;
         }
 
-        if (col.tag == "TouchingObject")
+        if (col.gameObject.layer == LayerMask.NameToLayer("Enemies"))
         {
+            PlayerWasRespawned(true);
+
             if (checkpointReached)
             {
                 rb.bodyType = RigidbodyType2D.Static;
@@ -152,7 +162,7 @@ public class PlayerController : MonoBehaviour {
                 transform.localScale = startPlayerScale;
                 rb.mass = startPlayerMass;
             }            
-        }
+        }//else PlayerWasRespawned(false);
 
 
         if (col.tag == "Coin")
@@ -185,6 +195,8 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.R) ||
             transform.position.y <= respawnPosition_Min || transform.position.y >= respawnPosition_Max)
         {
+            PlayerWasRespawned(true);
+
             if (checkpointReached)
             {
                 rb.bodyType = RigidbodyType2D.Static;
@@ -201,6 +213,20 @@ public class PlayerController : MonoBehaviour {
                 rb.bodyType = RigidbodyType2D.Dynamic;
                 transform.localScale = startPlayerScale;
                 rb.mass = startPlayerMass;
+            }
+        }//else PlayerWasRespawned(false);
+    }
+
+    public void PlayerWasRespawned(bool TrueFalse)
+    {
+        if (TrueFalse)
+        {
+            for (int i = 0; i < respawningObjs.Length; i++)
+            {
+                respawningRbs[i].bodyType = RigidbodyType2D.Static;
+                respawningRbs[i].bodyType = RigidbodyType2D.Dynamic;
+                respawningObjs[i].transform.position = startPositionOfRespawningObjs[i];
+                respawningObjs[i].transform.rotation = startRotationOfRespawningObjs[i];
             }
         }
     }
@@ -234,12 +260,26 @@ public class PlayerController : MonoBehaviour {
      ****************************************/
     void Start()
     {
-        startPlayerScale = transform.localScale;
-        startPoint = transform.position;
+        //Initialization of respawning objects
+        respawningObjs = GameObject.FindGameObjectsWithTag("MovingObject");
+        respawningRbs = new Rigidbody2D[respawningObjs.Length];
+        startPositionOfRespawningObjs = new Vector2[respawningObjs.Length];
+        startRotationOfRespawningObjs = new Quaternion[respawningObjs.Length];
 
+        for (int i = 0; i < respawningObjs.Length; i++)
+        {
+            respawningRbs[i] = respawningObjs[i].GetComponent<Rigidbody2D>();
+            startPositionOfRespawningObjs[i] = respawningObjs[i].transform.position;
+            startRotationOfRespawningObjs[i] = respawningObjs[i].transform.rotation;
+        }
+
+        //Initialization of player rigidbody and collider
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
 
+        //Initialization of player scale, position and mass
+        startPlayerScale = transform.localScale;
+        startPoint = transform.position;
         startPlayerMass = rb.mass;
     }
 
