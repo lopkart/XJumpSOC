@@ -6,12 +6,12 @@ using TMPro;
 
 public class TimeController : MonoBehaviour {
     
-    public int endForGold;      // how much second will be when the Player can get gold medal
-    public int endForSilver;    // how much second will be when the Player can get silver medal
-    public int endForBronze;    // how much second will be when the Player can get bronze medal
+    public int endForTwoCoins;      // how much second will be when the Player can get gold medal
+    //public int endForSilver;    // how much second will be when the Player can get silver medal
+    public int endForOneCoin;    // how much second will be when the Player can get bronze medal
     public Image Clock;
-    public GameObject Player;
-    public GameObject Menuses;
+    private GameObject Player;
+    private GameObject Menuses;
     [HideInInspector]
     public float tTime;
     [HideInInspector]
@@ -20,10 +20,9 @@ public class TimeController : MonoBehaviour {
     PlayerController playerCont;
     MenusesController menusesCont;
     private TextMeshProUGUI timerText;
-    private Color colorForGoldMedal = new Color32(0, 255, 0, 255);
-    private Color colorForSilverMedal = new Color32(255, 255, 0, 255);
-    private Color colorForBronzeMedal = new Color32(255, 170, 0, 255);
-    private Color endColor = Color.red;     // without medal
+    private Color colorForTwoCoins = new Color32(0, 255, 0, 255);
+    private Color colorForOneCoin = new Color32(255, 200, 0, 255);
+    private Color endColor = Color.red;     // without coin
     private float lerpTime = 0.0f;
     private float startTime;
 
@@ -60,16 +59,18 @@ public class TimeController : MonoBehaviour {
 
     void Awake()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
+        Menuses = GameObject.FindGameObjectWithTag("Menuses");
+
         playerCont = Player.GetComponent<PlayerController>();
         menusesCont = Menuses.GetComponent<MenusesController>();
         timerText = GetComponent<TextMeshProUGUI>() ?? gameObject.AddComponent<TextMeshProUGUI>();
-        timerText.color = colorForGoldMedal;
+        timerText.color = colorForTwoCoins;
     }
 
     private void Start()
     {
-        endForSilver -= 1;  // je potrebne vzdy znizit o 1 pretoze animacia zmeny farby zacina prave o 1 sekundu neskor
-        endForBronze -= 1;
+        endForOneCoin -= 1; // je potrebne vzdy znizit o 1 pretoze animacia zmeny farby zacina prave o 1 sekundu neskor
 
         startTime = Time.time;
     }
@@ -79,25 +80,20 @@ public class TimeController : MonoBehaviour {
         if (playerCont.Respawned)
         {
             startTime = Time.time;
-            timerText.color = colorForGoldMedal;
+            timerText.color = colorForTwoCoins;
             playerCont.Respawned = false;
         }
 
         Timing();
 
         //Changing color
-        if ((int)tTime == endForSilver || (int)tTime == endForBronze)
+        if ((int)tTime == endForOneCoin)
         {
             lerpTime = 0.0f;
         }
 
-
-        ColorChanging(endForGold, endForSilver, colorForGoldMedal, colorForSilverMedal);        // Change gold medal to silver medal
-
-        ColorChanging(endForSilver, endForBronze, colorForSilverMedal, colorForBronzeMedal);    // Change silver medal to bronze medal
-
-        ColorChanging(endForBronze, (int)tTime + 1, colorForBronzeMedal, endColor);             // Change bronze medal to potato medal
-
+        ColorChanging(endForTwoCoins, endForOneCoin, colorForTwoCoins, colorForOneCoin);        // Change gold medal to silver medal
+        ColorChanging(endForOneCoin, (int)tTime + 1, colorForOneCoin, endColor);             // Change bronze medal to potato medal
 
         Clock.color = timerText.color;                                                          // Change color of Clock Image to color of TimerText
     }

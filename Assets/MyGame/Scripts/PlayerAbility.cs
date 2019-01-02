@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerAbility : MonoBehaviour {
 
     //Player
-    public GameObject Player;
     private Renderer PlayerRend;
 
     //Color
@@ -38,7 +37,7 @@ public class PlayerAbility : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        PlayerRend = Player.GetComponent<Renderer>();
+        PlayerRend = GetComponent<Renderer>();
         PlayerRend.material = PlayerBlue;
     }
 	

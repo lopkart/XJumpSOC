@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 50926148649000536}
   - component: {fileID: 70424130108320930}
   - component: {fileID: 114850389106033892}
-  - component: {fileID: 114706249518032664}
   - component: {fileID: 114237366286378448}
   m_Layer: 0
   m_Name: Player
@@ -417,7 +416,6 @@ MonoBehaviour:
   Player: {fileID: 1156064087223562}
   PointingArrow: {fileID: 4050287271536432}
   EndCheckpoint: {fileID: 0}
-  Coin: {fileID: 0}
 --- !u!114 &114237366286378448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -433,32 +431,6 @@ MonoBehaviour:
   PlayerBlue: {fileID: 2100000, guid: 4ae9062188e07bf4984fd6824ffde5bb, type: 2}
   PlayerYellow: {fileID: 2100000, guid: de272e953d8f61f4fac09f84ec946c43, type: 2}
   PlayerGreen: {fileID: 2100000, guid: d49a3dfc251d0e44697f1b7c0230e666, type: 2}
---- !u!114 &114706249518032664
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1156064087223562}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c2b1c7b37e04c04b896a4539e693372, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ChangingObjects:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Player: {fileID: 1156064087223562}
 --- !u!114 &114850389106033892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -486,17 +458,25 @@ MonoBehaviour:
   - {fileID: 4381777111570306}
   - {fileID: 4857584890052198}
   LinedBool: 0
+  EnemiesMask:
+    serializedVersion: 2
+    m_Bits: 0
   respawnPosition_Min: -3
   respawnPosition_Max: 120
   respawnPoint: {x: 0, y: 0, z: 0}
   startPoint: {x: 0, y: 0, z: 0}
   checkpointReached: 0
   Respawned: 0
+  startPlayerScale: {x: 0, y: 0, z: 0}
+  checkpointPlayerScale: {x: 0, y: 0, z: 0}
+  startPlayerMass: 0
+  checkpointPlayerMass: 0
   respawningObjs: []
   respawningRbs: []
   startPositionOfRespawningObjs: []
   startRotationOfRespawningObjs: []
   CoinText: {fileID: 0}
+  CoinPrefab: {fileID: 1124362840229956, guid: f860d8b88e564cd43899581c261b52f7, type: 2}
   rb: {fileID: 0}
 --- !u!124 &124017525631774056
 Behaviour:

@@ -25,6 +25,8 @@ TagManager:
   - MovingObject
   - PauseMenu
   - RandomMovingObjects
+  - Menuses
+  - EndPoint
   layers:
   - Default
   - TransparentFX

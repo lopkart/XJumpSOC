@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114296581578149672}
   m_Layer: 0
   m_Name: MovingUpCube
-  m_TagString: Untagged
+  m_TagString: MovingObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,4 +121,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4798bc006b49d404bb7c61515f447fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelMenuUI: {fileID: 0}
+  Speed: 2

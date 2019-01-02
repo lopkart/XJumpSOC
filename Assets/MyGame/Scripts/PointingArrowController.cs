@@ -5,23 +5,38 @@ using UnityEngine;
 public class PointingArrowController : MonoBehaviour {
 
     [Header("Pointing arrow")]
-    public GameObject Player;
-    public Transform PointingArrow;
-    public Transform EndCheckpoint;
-    public Transform Coin;
+    private GameObject Player;
+    private Transform PointingArrow;
+    private Transform EndCheckpoint;
 
+    private Transform Coin = GameObject.FindGameObjectWithTag("Coin").transform;
     private Transform target;
 
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void Awake()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
+        PointingArrow = transform.GetChild(0);
+        EndCheckpoint = GameObject.FindGameObjectWithTag("EndPoint").transform;
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         //Oprava velkosti ukazovacej sipky pri zmene velkosti hraca
         if (Player.transform.localScale == new Vector3(1f, 1f, 1f)) PointingArrow.transform.localScale = new Vector3(0.6f, 0.6f, 0.6f);    
         else if (Player.transform.localScale == new Vector3(0.5f, 0.5f, 0.5f)) PointingArrow.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+                
+        if(Coin == null && GameObject.FindGameObjectWithTag("Coin") != null)
+        {
+            Coin = GameObject.FindGameObjectWithTag("Coin").transform;
+        }
 
         //Nastavenie uhlu ukazovacej sipky
-        if (Coin == null) target = EndCheckpoint;
+        if (Coin == null)
+        {
+            target = EndCheckpoint;            
+        }
         else target = Coin;
 
         Vector2 relative = transform.InverseTransformPoint(target.position);

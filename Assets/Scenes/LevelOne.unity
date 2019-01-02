@@ -1139,6 +1139,10 @@ Prefab:
       propertyPath: playerRb
       value: 
       objectReference: {fileID: 1278764919}
+    - target: {fileID: 1860153970693638, guid: 8d75332195ca0184a8645a85ca09b398, type: 2}
+      propertyPath: m_TagString
+      value: Menuses
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d75332195ca0184a8645a85ca09b398, type: 2}
   m_IsPrefabParent: 0
@@ -3763,23 +3767,33 @@ Prefab:
     - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
         type: 2}
       propertyPath: endForGold
-      value: 43
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
         type: 2}
       propertyPath: endForSilver
-      value: 49
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
         type: 2}
       propertyPath: endForBronze
-      value: 60
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
         type: 2}
       propertyPath: Menuses
       value: 
       objectReference: {fileID: 456587087}
+    - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
+        type: 2}
+      propertyPath: endForTwoCoins
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
+        type: 2}
+      propertyPath: endForOneCoin
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb18e3dbb4c13df47bbc69f74f2945bb, type: 2}
   m_IsPrefabParent: 0
@@ -4800,6 +4814,11 @@ Prefab:
         type: 2}
       propertyPath: respawnPosition_Max
       value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 114237366286378448, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}

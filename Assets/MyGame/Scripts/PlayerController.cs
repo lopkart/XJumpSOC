@@ -32,10 +32,10 @@ public class PlayerController : MonoBehaviour {
     public bool LinedBool = false;
 
     //Enemies
-    public LayerMask EnemiesMask;
+    //public LayerMask EnemiesMask;
 
     [Header("Checkpoint & Respawning")]
-    public float respawnPosition_Min;  //
+    public float respawnPosition_Min;
     public float respawnPosition_Max;  //
     [HideInInspector]
     public Vector3 respawnPoint;    //
@@ -45,19 +45,30 @@ public class PlayerController : MonoBehaviour {
     public bool checkpointReached = false;
     [HideInInspector]
     public bool Respawned = false;  // used in TimeController
+    [HideInInspector]
     public Vector3 startPlayerScale;
+    [HideInInspector]
     public Vector3 checkpointPlayerScale;
+    [HideInInspector]
     public float startPlayerMass;
+    [HideInInspector]
     public float checkpointPlayerMass;
 
+    [HideInInspector]
     public GameObject[] respawningObjs;
+    [HideInInspector]
     public Rigidbody2D[] respawningRbs;
+    [HideInInspector]
     public Vector2[] startPositionOfRespawningObjs;
+    [HideInInspector]
     public Quaternion[] startRotationOfRespawningObjs;
 
     [Header("Coins")]
     public TextMeshProUGUI CoinText;
     private int coins = 0;
+    public GameObject CoinPrefab;
+    private Vector2 startCoinPosition;
+    private Quaternion startCoinRotation;
 
     [HideInInspector]
     public Rigidbody2D rb;
@@ -221,6 +232,12 @@ public class PlayerController : MonoBehaviour {
     {
         if (TrueFalse)
         {
+            if (coins == 1)
+            {
+                coins -= 1;
+                Instantiate(CoinPrefab, startCoinPosition, startCoinRotation);
+            }            
+
             for (int i = 0; i < respawningObjs.Length; i++)
             {
                 respawningRbs[i].bodyType = RigidbodyType2D.Static;
@@ -281,6 +298,10 @@ public class PlayerController : MonoBehaviour {
         startPlayerScale = transform.localScale;
         startPoint = transform.position;
         startPlayerMass = rb.mass;
+
+        //Initialization of coins
+        startCoinPosition = GameObject.FindGameObjectWithTag("Coin").transform.position;
+        startCoinRotation = GameObject.FindGameObjectWithTag("Coin").transform.rotation;
     }
 
     void Update()

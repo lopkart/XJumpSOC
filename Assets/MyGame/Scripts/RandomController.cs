@@ -33,7 +33,7 @@ public class RandomController : MonoBehaviour {
     }
     
     // Use this for initialization
-    void Start ()
+    void Awake ()
     {
         RbOfObjects = new Rigidbody2D[Objects.Length];
 

@@ -9,10 +9,16 @@ public class LevelMenuController : MonoBehaviour {
      * ked sa zapne gameObject do ktoreho je tento script vlozeny spusti sa animacia ktora je dopredu vlozena
      * a dalsie podprogramy maju na starosti co sa stane pri stlaceni tlacidiel
      */
-
-    public Rigidbody2D playerRb;
+    private GameObject Player;
+    private Rigidbody2D playerRb;
     public Rigidbody2D MovingUpCubeRb;
     Animator Anim;
+
+    private void Awake()
+    {
+        Player = GameObject.FindGameObjectWithTag("Player");
+        playerRb = Player.GetComponent<Rigidbody2D>();
+    }
 
     void Start()
     {
