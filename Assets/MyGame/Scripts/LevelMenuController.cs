@@ -11,7 +11,7 @@ public class LevelMenuController : MonoBehaviour {
      */
     private GameObject Player;
     private Rigidbody2D playerRb;
-    public Rigidbody2D MovingUpCubeRb;
+    public TouchingObjectController MovingUpCubeCont;
     Animator Anim;
 
     private void Awake()
@@ -22,7 +22,7 @@ public class LevelMenuController : MonoBehaviour {
 
     void Start()
     {
-        MovingUpCubeRb.velocity = new Vector2(0, 0);
+        MovingUpCubeCont.enabled = false;
 
         Anim = GetComponent<Animator>();
         Anim.SetBool("LevelMenuBttns", false);
@@ -32,7 +32,5 @@ public class LevelMenuController : MonoBehaviour {
     {
         playerRb.velocity = new Vector2(0, 0);
         playerRb.gravityScale = 0;
-        
-        MovingUpCubeRb.velocity = new Vector2(0, 0);
     }
 }

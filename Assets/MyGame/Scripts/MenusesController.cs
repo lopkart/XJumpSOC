@@ -8,8 +8,9 @@ public class MenusesController : MonoBehaviour {
     [HideInInspector]
     public bool Resumed = false;
     private GameObject PauseMenu;
+    public TouchingObjectController MovingUpCubeCont;
 
-    
+
     public void MainMenuBttn()
     {
         SceneManager.LoadScene("MainMenu");
@@ -34,6 +35,7 @@ public class MenusesController : MonoBehaviour {
     {
         PauseMenu.SetActive(false);
         Resumed = true;
+        MovingUpCubeCont.enabled = true;
     }
 
     public void PreviousLevelBttn()
@@ -53,6 +55,7 @@ public class MenusesController : MonoBehaviour {
         if (Input.GetKey(KeyCode.Escape) || Input.GetKey(KeyCode.P))
         {
             PauseMenu.SetActive(true);
+            MovingUpCubeCont.enabled = false;
         }
     }
 }

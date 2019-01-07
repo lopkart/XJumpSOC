@@ -413,9 +413,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa6612a13205394286b0c9030ede8f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1156064087223562}
-  PointingArrow: {fileID: 4050287271536432}
-  EndCheckpoint: {fileID: 0}
 --- !u!114 &114237366286378448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -427,7 +424,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c15d823cd7a08149a8198984d4a357a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 0}
   PlayerBlue: {fileID: 2100000, guid: 4ae9062188e07bf4984fd6824ffde5bb, type: 2}
   PlayerYellow: {fileID: 2100000, guid: de272e953d8f61f4fac09f84ec946c43, type: 2}
   PlayerGreen: {fileID: 2100000, guid: d49a3dfc251d0e44697f1b7c0230e666, type: 2}
@@ -458,9 +454,6 @@ MonoBehaviour:
   - {fileID: 4381777111570306}
   - {fileID: 4857584890052198}
   LinedBool: 0
-  EnemiesMask:
-    serializedVersion: 2
-    m_Bits: 0
   respawnPosition_Min: -3
   respawnPosition_Max: 120
   respawnPoint: {x: 0, y: 0, z: 0}
@@ -475,6 +468,8 @@ MonoBehaviour:
   respawningRbs: []
   startPositionOfRespawningObjs: []
   startRotationOfRespawningObjs: []
+  lineCreator: {fileID: 114176583006899216, guid: 968df665f0fea234196ebd4231557dab,
+    type: 2}
   CoinText: {fileID: 0}
   CoinPrefab: {fileID: 1124362840229956, guid: f860d8b88e564cd43899581c261b52f7, type: 2}
   rb: {fileID: 0}

@@ -143,6 +143,59 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 7
+--- !u!1001 &47391505
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965765345695530, guid: 7191a7d7cd4a22941bdb4a24eea3b145,
+        type: 2}
+      propertyPath: levelsCoinText
+      value: 
+      objectReference: {fileID: 1633110530}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &47391506 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114965765345695530, guid: 7191a7d7cd4a22941bdb4a24eea3b145,
+    type: 2}
+  m_PrefabInternal: {fileID: 47391505}
+  m_Script: {fileID: 11500000, guid: a18b927d02233774e91f1c8d81d40b14, type: 3}
 --- !u!1 &121722180 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1815194300268022, guid: 2d1101a01c647c64bb9caa62a6b1d3d6,
@@ -4820,6 +4873,16 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23286749808787852, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ae9062188e07bf4984fd6824ffde5bb, type: 2}
+    - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: coinManager
+      value: 
+      objectReference: {fileID: 47391506}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
   m_IsPrefabParent: 0

@@ -7,7 +7,6 @@ using TMPro;
 public class TimeController : MonoBehaviour {
     
     public int endForTwoCoins;      // how much second will be when the Player can get gold medal
-    //public int endForSilver;    // how much second will be when the Player can get silver medal
     public int endForOneCoin;    // how much second will be when the Player can get bronze medal
     public Image Clock;
     private GameObject Player;

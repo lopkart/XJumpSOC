@@ -4663,6 +4663,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 968df665f0fea234196ebd4231557dab, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &822372724 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114176583006899216, guid: 968df665f0fea234196ebd4231557dab,
+    type: 2}
+  m_PrefabInternal: {fileID: 822372723}
+  m_Script: {fileID: 11500000, guid: ab87baf9b63c8af42bebd500767022af, type: 3}
 --- !u!1 &831618501
 GameObject:
   m_ObjectHideFlags: 0
@@ -8257,11 +8263,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -56.96
+      value: 167.74
       objectReference: {fileID: 0}
     - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 41.39
       objectReference: {fileID: 0}
     - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
       propertyPath: m_LocalPosition.z
@@ -8290,7 +8296,7 @@ Prefab:
     - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
         type: 2}
       propertyPath: respawnPosition_Min
-      value: -15
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
         type: 2}
@@ -8344,6 +8350,36 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23286749808787852, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ae9062188e07bf4984fd6824ffde5bb, type: 2}
+    - target: {fileID: 20717948783566534, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0.24705882
+      objectReference: {fileID: 0}
+    - target: {fileID: 20717948783566534, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0.24705882
+      objectReference: {fileID: 0}
+    - target: {fileID: 20717948783566534, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0.24705882
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: lineCreator
+      value: 
+      objectReference: {fileID: 822372724}
+    - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: coinManager
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114706249518032664, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}

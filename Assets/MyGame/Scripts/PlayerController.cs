@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour {
     [HideInInspector]
     public float checkpointPlayerMass;
 
+    //Respawnings
     [HideInInspector]
     public GameObject[] respawningObjs;
     [HideInInspector]
@@ -63,9 +64,14 @@ public class PlayerController : MonoBehaviour {
     [HideInInspector]
     public Quaternion[] startRotationOfRespawningObjs;
 
+    //Line
+    public LineCreator lineCreator;
+
     [Header("Coins")]
     public TextMeshProUGUI CoinText;
-    private int coins = 0;
+    [HideInInspector]
+    public static int coins;
+    private bool coinCatched = false;
     public GameObject CoinPrefab;
     private Vector2 startCoinPosition;
     private Quaternion startCoinRotation;
@@ -173,13 +179,14 @@ public class PlayerController : MonoBehaviour {
                 transform.localScale = startPlayerScale;
                 rb.mass = startPlayerMass;
             }            
-        }//else PlayerWasRespawned(false);
+        }else PlayerWasRespawned(false);
 
 
         if (col.tag == "Coin")
         {
             Destroy(GameObject.FindGameObjectWithTag("Coin"));
             coins += 1;
+            coinCatched = true;
         }
     }
     
@@ -225,18 +232,22 @@ public class PlayerController : MonoBehaviour {
                 transform.localScale = startPlayerScale;
                 rb.mass = startPlayerMass;
             }
-        }//else PlayerWasRespawned(false);
+        }else PlayerWasRespawned(false);
     }
 
     public void PlayerWasRespawned(bool TrueFalse)
     {
         if (TrueFalse)
         {
-            if (coins == 1)
+            if (coins != 0)
             {
                 coins -= 1;
+            }
+
+            if (coinCatched)
+            {
                 Instantiate(CoinPrefab, startCoinPosition, startCoinRotation);
-            }            
+            }
 
             for (int i = 0; i < respawningObjs.Length; i++)
             {
@@ -245,7 +256,13 @@ public class PlayerController : MonoBehaviour {
                 respawningObjs[i].transform.position = startPositionOfRespawningObjs[i];
                 respawningObjs[i].transform.rotation = startRotationOfRespawningObjs[i];
             }
+            /*
+            if(lineCreator != null)
+            {
+                Destroy(lineCreator.lineGO);
+            }  */          
         }
+        else coinCatched = false;
     }
 
     /****************************************
@@ -311,6 +328,6 @@ public class PlayerController : MonoBehaviour {
         //Shape();
         Respawning();
 
-        CoinText.text = "Coins: " + coins;
+        CoinText.text = "COINS: " + coins;
     }
 }

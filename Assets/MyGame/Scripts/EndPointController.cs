@@ -11,7 +11,7 @@ public class EndPointController : MonoBehaviour {
      */
 
     public TextMeshProUGUI Timer;
-    public GameObject LevelMenuUI;
+    public GameObject LevelMenuUI = GameObject.FindGameObjectWithTag("LevelMenuUI");
 
     TimeController timeCont;
 
@@ -19,9 +19,6 @@ public class EndPointController : MonoBehaviour {
     private void Awake()
     {
         timeCont = Timer.GetComponent<TimeController>();
-    }
-    private void Start()
-    {
         LevelMenuUI.SetActive(false);
     }
 
