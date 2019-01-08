@@ -4,45 +4,69 @@ using UnityEngine;
 
 public class PlayerAbility : MonoBehaviour {
 
+
+    public bool EnableScript = true;
+
     //Player
-    private Renderer PlayerRend;
+    public static Renderer PlayerRend;
 
     //Color
+    public static Material PlayerBlueSkin;
+    public static Material PlayerYellowSkin;
+    public static Material PlayerGreenSkin;
+
     public Material PlayerBlue;
     public Material PlayerYellow;
     public Material PlayerGreen;
-
+ 
 
     void ChangeColorAndTrigger()
-    {       
-        // GREEN
-        if (Input.GetKey(KeyCode.Q))
+    {    
+        if(EnableScript)
         {
-            PlayerRend.material = PlayerGreen;
-        }
+            // GREEN
+            if (Input.GetKey(KeyCode.Q))
+            {
+                PlayerRend.material = PlayerGreen;
+            }
 
-        // YELLOW
-        if (Input.GetKey(KeyCode.E))
-        {
-            PlayerRend.material = PlayerYellow;
-        }
+            // YELLOW
+            if (Input.GetKey(KeyCode.E))
+            {
+                PlayerRend.material = PlayerYellow;
+            }
 
-        // BLUE
-        if (Input.GetKey(KeyCode.X))
-        {
-            PlayerRend.material = PlayerBlue;
-        }
+            // BLUE
+            if (Input.GetKey(KeyCode.X))
+            {
+                PlayerRend.material = PlayerBlue;
+            }
+        }        
     }
 
-
-    // Use this for initialization
+    
     void Start () {
+
         PlayerRend = GetComponent<Renderer>();
+
+        if (PlayerBlueSkin != null)
+        {
+            PlayerBlue = PlayerBlueSkin;
+            PlayerYellow = PlayerYellowSkin;
+            PlayerGreen = PlayerGreenSkin;
+        }
+
         PlayerRend.material = PlayerBlue;
     }
 	
-	// Update is called once per frame
 	void Update () {
-        ChangeColorAndTrigger();
+        ChangeColorAndTrigger();        
+
+        if(PlayerBlueSkin != null)
+        {
+            PlayerBlue = PlayerBlueSkin;
+            PlayerYellow = PlayerYellowSkin;
+            PlayerGreen = PlayerGreenSkin;
+        }        
     }
 }

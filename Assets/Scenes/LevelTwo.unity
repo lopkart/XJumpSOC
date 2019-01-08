@@ -9911,11 +9911,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -18.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 158.7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9987,7 +9987,7 @@ Prefab:
     - target: {fileID: 114237366286378448, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
         type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
         type: 2}
@@ -9998,6 +9998,50 @@ Prefab:
         type: 2}
       propertyPath: respawnPosition_Min
       value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114237366286378448, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: EnableScript
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114237366286378448, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: PlayerBlue
+      value: 
+      objectReference: {fileID: 2100000, guid: 4ae9062188e07bf4984fd6824ffde5bb, type: 2}
+    - target: {fileID: 114237366286378448, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: PlayerYellow
+      value: 
+      objectReference: {fileID: 2100000, guid: d49a3dfc251d0e44697f1b7c0230e666, type: 2}
+    - target: {fileID: 114237366286378448, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: PlayerGreen
+      value: 
+      objectReference: {fileID: 2100000, guid: de272e953d8f61f4fac09f84ec946c43, type: 2}
+    - target: {fileID: 20717948783566534, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: orthographic size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4164110873294612, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 20717948783566534, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0.101960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 20717948783566534, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0.101960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 20717948783566534, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0.101960786
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114706249518032664, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}

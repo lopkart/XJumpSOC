@@ -9,11 +9,11 @@ public class PlayerController : MonoBehaviour {
     *          V A R I A B L E S           *
     ****************************************/
     [Header("MOVEMENT")]
-    public float moveSpeed = 9f;                        // rýchlosť pohybu
+    public static float moveSpeed = 9f;                        // rýchlosť pohybu
 
     [Header("JUMPING")]
     [Range(5, 20)]
-    public float JumpVelocity;                          // sila skoku
+    public static float JumpVelocity = 14f;                          // sila skoku
     [SerializeField]
     private float fallMultiplier;                       // úprava veľkosti pádu zo skoku --> väčšia ako lowJumpMultiplier
     [SerializeField]
@@ -69,10 +69,12 @@ public class PlayerController : MonoBehaviour {
 
     [Header("Coins")]
     public TextMeshProUGUI CoinText;
+    //public TextMeshProUGUI mainMenuCoinText;
     [HideInInspector]
     public static int coins;
-    private bool coinCatched = false;
+    public bool coinCatched = false;
     public GameObject CoinPrefab;
+    private static GameObject currentCoin;
     private Vector2 startCoinPosition;
     private Quaternion startCoinRotation;
 
@@ -179,7 +181,7 @@ public class PlayerController : MonoBehaviour {
                 transform.localScale = startPlayerScale;
                 rb.mass = startPlayerMass;
             }            
-        }else PlayerWasRespawned(false);
+        }
 
 
         if (col.tag == "Coin")
@@ -232,21 +234,23 @@ public class PlayerController : MonoBehaviour {
                 transform.localScale = startPlayerScale;
                 rb.mass = startPlayerMass;
             }
-        }else PlayerWasRespawned(false);
+        }
     }
 
     public void PlayerWasRespawned(bool TrueFalse)
     {
         if (TrueFalse)
         {
-            if (coins != 0)
+            if (coins != 0 && coinCatched)
             {
                 coins -= 1;
             }
 
             if (coinCatched)
             {
-                Instantiate(CoinPrefab, startCoinPosition, startCoinRotation);
+                currentCoin = CoinPrefab;
+                Instantiate(currentCoin, startCoinPosition, startCoinRotation);
+                coinCatched = false;
             }
 
             for (int i = 0; i < respawningObjs.Length; i++)
@@ -256,13 +260,27 @@ public class PlayerController : MonoBehaviour {
                 respawningObjs[i].transform.position = startPositionOfRespawningObjs[i];
                 respawningObjs[i].transform.rotation = startRotationOfRespawningObjs[i];
             }
-            /*
+            
             if(lineCreator != null)
             {
                 Destroy(lineCreator.lineGO);
-            }  */          
+            }          
         }
-        else coinCatched = false;
+    }
+
+    public void coinsToTexts()
+    {
+        if (CoinText != null)
+        {
+            CoinText.text = "COINS: " + coins;
+        }
+        /*
+        if (mainMenuCoinText != null)
+        {
+            if (coins == 0) mainMenuCoinText.text = "YOUR\nCOINS:\n" + 0;
+            else mainMenuCoinText.text = "YOUR\nCOINS:\n" + coins;
+        }
+        */
     }
 
     /****************************************
@@ -327,7 +345,7 @@ public class PlayerController : MonoBehaviour {
         Jumping();
         //Shape();
         Respawning();
-
-        CoinText.text = "COINS: " + coins;
+        coinsToTexts();
+        rb.gravityScale = ShopController.PlayerGravityScale;
     }
 }

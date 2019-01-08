@@ -1256,53 +1256,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 54909306}
---- !u!1001 &65149845
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114965765345695530, guid: 7191a7d7cd4a22941bdb4a24eea3b145,
-        type: 2}
-      propertyPath: mainMenuCoinText
-      value: 
-      objectReference: {fileID: 2120339691}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &67492915
 GameObject:
   m_ObjectHideFlags: 0
@@ -4089,7 +4042,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_fontColorGradient:
@@ -4641,7 +4594,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_fontColorGradient:
@@ -4959,6 +4912,86 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &344942439
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4597314804783946, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1486919934105500, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50926148649000536, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: lineCreator
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: CoinText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: mainMenuCoinText
+      value: 
+      objectReference: {fileID: 2120339691}
+    - target: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: respawnPosition_Min
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156064087223562, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114237366286378448, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &347244302
 GameObject:
   m_ObjectHideFlags: 0
@@ -9426,7 +9459,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 624536433}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1247533566}
+        m_MethodName: buyFeature2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &624536433
@@ -11480,8 +11524,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 149185409}
-        m_MethodName: BackToMenu
+      - m_Target: {fileID: 1247533566}
+        m_MethodName: buyFeature3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12036,7 +12080,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 849702377}
-    characterCount: 7
+    characterCount: 8
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
@@ -12453,7 +12497,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 859013948}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1247533566}
+        m_MethodName: buyFeature1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &859013948
@@ -13216,8 +13271,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 149185409}
-        m_MethodName: QuitButton
+      - m_Target: {fileID: 1247533566}
+        m_MethodName: buyFeature4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14252,7 +14307,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_fontColorGradient:
@@ -14417,7 +14472,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1006593501}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1247533566}
+        m_MethodName: buySkin3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1006593501
@@ -14631,6 +14697,59 @@ GUIText:
     rgba: 4294967295
   m_PixelCorrect: 1
   m_RichText: 1
+--- !u!1001 &1030785002
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4430314621565858, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114965765345695530, guid: 7191a7d7cd4a22941bdb4a24eea3b145,
+        type: 2}
+      propertyPath: mainMenuCoinText
+      value: 
+      objectReference: {fileID: 2120339691}
+    - target: {fileID: 114965765345695530, guid: 7191a7d7cd4a22941bdb4a24eea3b145,
+        type: 2}
+      propertyPath: playerController
+      value: 
+      objectReference: {fileID: 114850389106033892, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
+        type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7191a7d7cd4a22941bdb4a24eea3b145, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1060051870
 GameObject:
   m_ObjectHideFlags: 0
@@ -14884,7 +15003,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1078096098}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1247533566}
+        m_MethodName: buySkin4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1078096098
@@ -17548,6 +17678,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1247533565}
+  - component: {fileID: 1247533566}
+  - component: {fileID: 1247533567}
   m_Layer: 5
   m_Name: ShopBttns
   m_TagString: Untagged
@@ -17575,6 +17707,53 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1247533566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1247533564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9f198485d772ef4887e22c1494bca6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerBlueLinear: {fileID: 2100000, guid: 78fdce6416a090748b6cbf92ac2db098, type: 2}
+  PlayerYellowLinear: {fileID: 2100000, guid: a09ea535064e6e749a4e7695c5306c9e, type: 2}
+  PlayerGreenLinear: {fileID: 2100000, guid: 16d5ead449e681c4ab8edb74a60c852f, type: 2}
+  PlayerBlueLinear45: {fileID: 2100000, guid: 6f13691ea2eefc44c8a7e2ed1faa06ba, type: 2}
+  PlayerYellowLinear45: {fileID: 2100000, guid: d307efdf9e2c51f488d2ff0fa76d5152,
+    type: 2}
+  PlayerGreenLinear45: {fileID: 2100000, guid: e57a47765d85abf4ca4d7b28719163b1, type: 2}
+  PlayerBlueRadial: {fileID: 2100000, guid: 5076d7a93c5cc8048a2babb4c9de4afa, type: 2}
+  PlayerYellowRadial: {fileID: 2100000, guid: 59a6de76e835eef4583fe2624aca6889, type: 2}
+  PlayerGreenRadial: {fileID: 2100000, guid: 83acfd19c18de4440b7c9dde89437b3d, type: 2}
+  PlayerBlueDiamond: {fileID: 2100000, guid: cfda78dd95502974b9f58899372f6f3d, type: 2}
+  PlayerYellowDiamond: {fileID: 2100000, guid: d7128cdc8dc9510498b9263a2518d476, type: 2}
+  PlayerGreenDiamond: {fileID: 2100000, guid: 1611a546dc5ad9b4398e49b1b7fc74ed, type: 2}
+  skin1Text: {fileID: 20762690}
+  skin2Text: {fileID: 1874903663}
+  skin3Text: {fileID: 67553180}
+  skin4Text: {fileID: 1381862929}
+  feature1Text: {fileID: 288309329}
+  feature2Text: {fileID: 486104706}
+  feature3Text: {fileID: 1601220963}
+  feature4Text: {fileID: 849702377}
+--- !u!114 &1247533567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1247533564}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c15d823cd7a08149a8198984d4a357a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnableScript: 1
+  PlayerBlue: {fileID: 2100000, guid: 4ae9062188e07bf4984fd6824ffde5bb, type: 2}
+  PlayerYellow: {fileID: 2100000, guid: de272e953d8f61f4fac09f84ec946c43, type: 2}
+  PlayerGreen: {fileID: 2100000, guid: d49a3dfc251d0e44697f1b7c0230e666, type: 2}
 --- !u!1 &1248783258
 GameObject:
   m_ObjectHideFlags: 0
@@ -21192,7 +21371,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1488007194}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1247533566}
+        m_MethodName: buySkin2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1488007194
@@ -21849,7 +22039,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_fontColorGradient:
@@ -23192,7 +23382,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1601220963}
-    characterCount: 7
+    characterCount: 8
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
@@ -25236,7 +25426,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1755183098}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1247533566}
+        m_MethodName: buySkin1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1755183098
@@ -27869,7 +28070,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_fontColorGradient:
@@ -29350,12 +29551,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2120339691}
-    characterCount: 14
+    characterCount: 12
     spriteCount: 0
     spaceCount: 2
-    wordCount: 3
+    wordCount: 2
     linkCount: 0
-    lineCount: 3
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 1

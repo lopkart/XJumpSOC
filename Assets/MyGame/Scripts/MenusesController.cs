@@ -9,6 +9,7 @@ public class MenusesController : MonoBehaviour {
     public bool Resumed = false;
     private GameObject PauseMenu;
     public TouchingObjectController MovingUpCubeCont;
+    private PlayerController playerCont;
 
 
     public void MainMenuBttn()
@@ -24,6 +25,11 @@ public class MenusesController : MonoBehaviour {
     public void ResetLevelBttn()
     {     
         SceneManager.LoadScene(Application.loadedLevel);
+
+        if (playerCont.coinCatched && PlayerController.coins != 0)
+        {
+            PlayerController.coins -= 1;
+        }
     }
 
     public void OptionsBttn()
@@ -48,6 +54,10 @@ public class MenusesController : MonoBehaviour {
     {
         PauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
         PauseMenu.SetActive(false);
+        if(GameObject.FindGameObjectWithTag("Player") != null)
+        {
+            playerCont = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        }        
     }
 
     private void Update()

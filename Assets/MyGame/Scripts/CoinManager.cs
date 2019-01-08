@@ -5,19 +5,21 @@ using TMPro;
 
 public class CoinManager : MonoBehaviour {
 
-    public TextMeshProUGUI mainMenuCoinText;
 
+    public TextMeshProUGUI mainMenuCoinText;
     [HideInInspector]
-    public static int allCoins;
+    public static int allCoins;    
 
 
 	void Start ()
     {
-        
+
 	}
 	
 	void Update ()
     {
+        allCoins = PlayerController.coins;
+
         if (mainMenuCoinText != null)
         {
             mainMenuCoinText.text = "YOUR\nCOINS:\n" + allCoins;

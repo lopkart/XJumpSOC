@@ -11,17 +11,20 @@ public class LineCreator: MonoBehaviour {
     [HideInInspector]
     public GameObject lineGO;
 
+    private float destroyLineTime;
     Line activeLine;
     
 
     void Update()
-    {        
+    {
+        destroyLineTime = ShopController.destroyLineStaticTime;
+
         if (Input.GetMouseButtonDown(0) && playerController.LinedBool)
         {
             lineGO = Instantiate(linePrefab);
             activeLine = lineGO.GetComponent<Line>();
 
-            Destroy(lineGO, 5f);
+            Destroy(lineGO, destroyLineTime);
         }           
 
         if (Input.GetMouseButtonUp(0))
