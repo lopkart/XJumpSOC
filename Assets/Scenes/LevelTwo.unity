@@ -10022,11 +10022,11 @@ Prefab:
     - target: {fileID: 20717948783566534, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
         type: 2}
       propertyPath: orthographic size
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4164110873294612, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 20717948783566534, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
         type: 2}
@@ -12202,12 +12202,12 @@ Prefab:
     - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
         type: 2}
       propertyPath: endForTwoCoins
-      value: 3
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
         type: 2}
       propertyPath: endForOneCoin
-      value: 6
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 114114371285440770, guid: bb18e3dbb4c13df47bbc69f74f2945bb,
         type: 2}

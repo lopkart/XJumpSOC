@@ -274,13 +274,6 @@ public class PlayerController : MonoBehaviour {
         {
             CoinText.text = "COINS: " + coins;
         }
-        /*
-        if (mainMenuCoinText != null)
-        {
-            if (coins == 0) mainMenuCoinText.text = "YOUR\nCOINS:\n" + 0;
-            else mainMenuCoinText.text = "YOUR\nCOINS:\n" + coins;
-        }
-        */
     }
 
     /****************************************

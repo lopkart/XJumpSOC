@@ -303,12 +303,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4164110873294612, guid: 8a61e4ef12ea8a140b4b3c68976fadba, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 20717948783566534, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
         type: 2}
       propertyPath: orthographic size
-      value: 9
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 20717948783566534, guid: 8a61e4ef12ea8a140b4b3c68976fadba,
         type: 2}
@@ -412,6 +412,11 @@ Prefab:
       propertyPath: LevelMenuUI
       value: 
       objectReference: {fileID: 31894701}
+    - target: {fileID: 114808636010795824, guid: ae74b1d5319f59c44bc136e6d60ba7a2,
+        type: 2}
+      propertyPath: lastLevel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae74b1d5319f59c44bc136e6d60ba7a2, type: 2}
   m_IsPrefabParent: 0

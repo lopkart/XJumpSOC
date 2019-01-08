@@ -190,7 +190,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1486919934105500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 7, z: -20}
+  m_LocalPosition: {x: 0, y: 3, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4597314804783946}
@@ -230,8 +230,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1156064087223562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 148.788, y: 57.69, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 98.82, y: 12.43, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4164110873294612}
   - {fileID: 4987840697359940}
@@ -291,7 +291,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.011764706, g: 0.011764706, b: 0.011764706, a: 1}
+  m_BackGroundColor: {r: 0.103773594, g: 0.103773594, b: 0.103773594, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -302,7 +302,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 15
+  orthographic size: 12
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -424,6 +424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c15d823cd7a08149a8198984d4a357a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnableScript: 0
   PlayerBlue: {fileID: 2100000, guid: 4ae9062188e07bf4984fd6824ffde5bb, type: 2}
   PlayerYellow: {fileID: 2100000, guid: de272e953d8f61f4fac09f84ec946c43, type: 2}
   PlayerGreen: {fileID: 2100000, guid: d49a3dfc251d0e44697f1b7c0230e666, type: 2}
@@ -438,8 +439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b71462644f58848b2f82e31f9615e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 9
-  JumpVelocity: 14
   fallMultiplier: 3
   lowJumpMultiplier: 2.5
   whatIsGround:
@@ -454,8 +453,8 @@ MonoBehaviour:
   - {fileID: 4381777111570306}
   - {fileID: 4857584890052198}
   LinedBool: 0
-  respawnPosition_Min: -3
-  respawnPosition_Max: 120
+  respawnPosition_Min: -6
+  respawnPosition_Max: 60
   respawnPoint: {x: 0, y: 0, z: 0}
   startPoint: {x: 0, y: 0, z: 0}
   checkpointReached: 0
@@ -468,9 +467,9 @@ MonoBehaviour:
   respawningRbs: []
   startPositionOfRespawningObjs: []
   startRotationOfRespawningObjs: []
-  lineCreator: {fileID: 114176583006899216, guid: 968df665f0fea234196ebd4231557dab,
-    type: 2}
+  lineCreator: {fileID: 0}
   CoinText: {fileID: 0}
+  coinCatched: 0
   CoinPrefab: {fileID: 1124362840229956, guid: f860d8b88e564cd43899581c261b52f7, type: 2}
   rb: {fileID: 0}
 --- !u!124 &124017525631774056
