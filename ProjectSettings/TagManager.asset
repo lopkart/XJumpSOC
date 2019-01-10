@@ -27,6 +27,7 @@ TagManager:
   - RandomMovingObjects
   - Menuses
   - EndPoint
+  - Line
   layers:
   - Default
   - TransparentFX

@@ -27,9 +27,6 @@ public class EndPointController : MonoBehaviour {
 
     public void OnTriggerEnter2D (Collider2D collision)
     {
-        if (timeCont.tTime < timeCont.endForTwoCoins) PlayerController.coins += 2;
-        if (timeCont.tTime >= timeCont.endForTwoCoins && timeCont.tTime <= timeCont.endForOneCoin) PlayerController.coins++;
-
         if (lastLevel)
         {
             SceneManager.LoadScene("MainMenu");
@@ -37,6 +34,9 @@ public class EndPointController : MonoBehaviour {
 
         if (collision.tag == "Player")
         {
+            if (timeCont.tTime < timeCont.endForTwoCoins) PlayerController.coins += 2;
+            if (timeCont.tTime >= timeCont.endForTwoCoins && timeCont.tTime <= timeCont.endForOneCoin) PlayerController.coins++;
+
             timeCont.keepTiming = false;
             LevelMenuUI.SetActive(true);
         }

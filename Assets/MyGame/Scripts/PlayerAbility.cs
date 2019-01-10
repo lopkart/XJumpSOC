@@ -56,7 +56,7 @@ public class PlayerAbility : MonoBehaviour {
             PlayerGreen = PlayerGreenSkin;
         }
 
-        PlayerRend.material = PlayerBlue;
+        PlayerRend.material = PlayerBlue;        
     }
 	
 	void Update () {

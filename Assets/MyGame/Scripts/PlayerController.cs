@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour {
     /****************************************
     *          V A R I A B L E S           *
     ****************************************/
+    #region Variables
     [Header("MOVEMENT")]
     public static float moveSpeed = 9f;                        // rýchlosť pohybu
 
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour {
 
     //Line
     public LineCreator lineCreator;
+    private GameObject[] LineHelper;
 
     [Header("Coins")]
     public TextMeshProUGUI CoinText;
@@ -81,12 +83,12 @@ public class PlayerController : MonoBehaviour {
     [HideInInspector]
     public Rigidbody2D rb;
     protected Collider2D coll;
-
+    #endregion
 
     /****************************************
      *         P R O C E D U R E S          *
      ****************************************/
-
+    #region Procedures
     public void Jumping()                  // skakanie hráča
     {
         bool Jump = Input.GetButtonDown("Vertical") || Input.GetKeyDown(KeyCode.Space);      // deklarácia vstupu klávesnice na výskok
@@ -263,7 +265,11 @@ public class PlayerController : MonoBehaviour {
             
             if(lineCreator != null)
             {
-                Destroy(lineCreator.lineGO);
+                //Destroy(lineCreator.lineGO);
+                for (int i = 0; i < LineHelper.Length; i++)
+                {
+                    Destroy(LineHelper[i]);
+                }
             }          
         }
     }
@@ -298,11 +304,12 @@ public class PlayerController : MonoBehaviour {
     {
         return Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsNonGround);
     }
-
+    #endregion
 
     /****************************************
      *      M A I N  P R O G R A M S        *
      ****************************************/
+    #region MainProgram
     void Start()
     {
         //Initialization of respawning objects
@@ -339,6 +346,9 @@ public class PlayerController : MonoBehaviour {
         //Shape();
         Respawning();
         coinsToTexts();
+
+        LineHelper = GameObject.FindGameObjectsWithTag("Line");
         rb.gravityScale = ShopController.PlayerGravityScale;
     }
+    #endregion
 }

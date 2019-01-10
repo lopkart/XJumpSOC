@@ -32,21 +32,11 @@ public class MenusesController : MonoBehaviour {
         }
     }
 
-    public void OptionsBttn()
-    {
-        // TODO: some animation
-    }
-
     public void ResumeBttn()
     {
         PauseMenu.SetActive(false);
         Resumed = true;
         MovingUpCubeCont.enabled = true;
-    }
-
-    public void PreviousLevelBttn()
-    {
-        Application.LoadLevel(Application.loadedLevel - 1);
     }
 
 
